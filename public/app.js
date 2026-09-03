@@ -7,9 +7,26 @@ let semester = '1';
 const selected = () => window.courses.filter(c => c.semester === Number(semester));
 const items = () => selected().flatMap(course => course.sessions.map(session => ({...session,course}))).sort((a,b) => `${a.date}${a.start}`.localeCompare(`${b.date}${b.start}`));
 
-function timelineView(all) {
-  const groups = all.reduce((acc,item) => ((acc[item.date] ??= []).push(item),acc),{});
-  return `<div class="timeline">${Object.entries(groups).map(([date,list]) => { const info=dateInfo(date); return `<section class="day-row"><div class="date-stamp"><strong>${info.label}</strong><span>${info.day}</span><small>${info.year}</small></div><div class="day-events">${list.map(item => `<article class="event-card ${item.kind==='exam'?'is-exam':''}" style="--course:${item.course.color}"><div class="event-time">◷ ${item.start}–${item.end}</div><div class="event-copy"><div class="event-meta"><span class="course-dot"></span>${esc(item.course.code)}${item.optional?'<em>可选班次</em>':''}${item.kind==='exam'?'<em>考试</em>':''}</div><h3>${esc(item.title)}</h3><p>${esc([item.venue,item.teacher].filter(Boolean).join(' · ') || '地点待定')}</p></div></article>`).join('')}</div></section>`; }).join('')}</div>`;
+function calendarView(all) {
+  const months = [...new Set(all.map(item => item.date.slice(0,7)))];
+  const today = new Date().toISOString().slice(0,10);
+  const weekdayHeaders = ['一','二','三','四','五','六','日'];
+  return `<div class="calendar-stack">${months.map(month => {
+    const [year,monthNumber] = month.split('-').map(Number);
+    const days = new Date(year,monthNumber,0).getDate();
+    const offset = (new Date(year,monthNumber-1,1).getDay()+6)%7;
+    const cells = Array.from({length:offset+days},(_,index) => {
+      if(index<offset) return '<div class="calendar-day is-empty" aria-hidden="true"></div>';
+      const day=index-offset+1;
+      const iso=`${month}-${String(day).padStart(2,'0')}`;
+      const dayItems=all.filter(item=>item.date===iso);
+      return `<div class="calendar-day ${iso===today?'is-today':''} ${dayItems.length?'has-events':''}"><div class="day-number"><span>${day}</span>${iso===today?'<small>今天</small>':''}</div><div class="calendar-events">${dayItems.map(item => {
+        const details=[item.title,item.venue,item.teacher].filter(Boolean).join(' · ');
+        return `<article class="calendar-event ${item.optional?'is-optional':''} ${item.kind==='exam'?'is-exam':''}" style="--course:${item.course.color}" title="${esc(details)}"><div><span>${item.start}</span><strong>${esc(item.course.code)}</strong></div><p>${esc(item.title)}</p>${item.optional?'<em>可选</em>':''}${item.kind==='exam'?'<em>考试</em>':''}</article>`;
+      }).join('')}</div></div>`;
+    }).join('');
+    return `<section class="month-card"><header><div><span>${year}</span><h2>${monthNumber}月</h2></div><strong>${all.filter(item=>item.date.startsWith(month)).length} 个安排</strong></header><div class="weekday-row">${weekdayHeaders.map(day=>`<span>${day}</span>`).join('')}</div><div class="month-grid">${cells}</div></section>`;
+  }).join('')}</div>`;
 }
 
 function loadView(all) {
@@ -29,7 +46,7 @@ function render() {
   document.querySelector('#sessionCount').textContent=fixed.length;
   document.querySelector('#hourCount').textContent=fixed.reduce((n,x)=>n+duration(x),0);
   document.querySelector('#examCount').textContent=fixed.filter(x=>x.kind==='exam').length;
-  document.querySelector('#timeline').innerHTML=timelineView(all);
+  document.querySelector('#calendar').innerHTML=calendarView(all);
   document.querySelector('#load').innerHTML=loadView(all);
   document.querySelector('#courses').innerHTML=courseView(list);
 }
