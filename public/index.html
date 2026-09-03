@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="HKU 2026–2027 已选课程时间轴、星期负荷与课程详情">
+  <title>HKU 课程时间表 2026–2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="masthead">
+      <div class="brand"><span>HKU</span><div><strong>课程时间表</strong><small>2026—2027</small></div></div>
+      <div class="term-control"><label for="semester">当前学期</label><select id="semester"><option value="1">第一学期 · 2026 秋</option><option value="2">第二学期 · 2027 春</option></select></div>
+    </header>
+    <section class="overview">
+      <div class="overview-title"><span>✦ MY STUDY MAP</span><h1 id="headline">秋季课表，一眼掌握</h1><p>将已选课程的课堂、实践、复习与考试统一到一条清晰时间线上。</p></div>
+      <div class="stat"><i>◫</i><strong id="courseCount">0</strong><span>门课程</span></div>
+      <div class="stat"><i>▦</i><strong id="sessionCount">0</strong><span>固定课次</span></div>
+      <div class="stat"><i>◷</i><strong id="hourCount">0</strong><span>总小时</span></div>
+      <div class="stat"><i>⌖</i><strong id="examCount">0</strong><span>场考试</span></div>
+    </section>
+    <nav class="tabs" aria-label="课表视图">
+      <button class="active" data-tab="timeline">时间轴</button><button data-tab="load">星期负荷</button><button data-tab="courses">课程详情</button>
+    </nav>
+    <section id="timeline" class="panel active"></section>
+    <section id="load" class="panel"></section>
+    <section id="courses" class="panel"></section>
+    <footer><span>整理自所提供的 6 份课程附件</span><span>更新基准 · 2026-09-03</span></footer>
+  </main>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
