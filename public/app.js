@@ -2,9 +2,14 @@ const weekdays = ['周日','周一','周二','周三','周四','周五','周六'
 const esc = (value = '') => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const duration = item => { const [sh,sm]=item.start.split(':').map(Number); const [eh,em]=item.end.split(':').map(Number); return (eh*60+em-sh*60-sm)/60; };
 const dateInfo = iso => { const d=new Date(`${iso}T12:00:00`); return {label:`${d.getMonth()+1}月${d.getDate()}日`, day:weekdays[d.getDay()], year:d.getFullYear(), index:d.getDay()}; };
+const localISO = (date = new Date()) => `${date.getFullYear()}-${String(date.getMonth()+1).padStart(2,'0')}-${String(date.getDate()).padStart(2,'0')}`;
 
-let semester = '1';
-let currentMonthIndex = 0;
+const todayISO = localISO();
+const todayMonth = todayISO.slice(0,7);
+const courseMonths = window.courses.flatMap(course => [...new Set(course.sessions.map(item=>item.date.slice(0,7)))].map(month=>({month,semester:course.semester}))).filter((item,index,list)=>list.findIndex(other=>other.month===item.month&&other.semester===item.semester)===index).sort((a,b)=>a.month.localeCompare(b.month));
+const initialMonth = courseMonths.find(item=>item.month===todayMonth) || courseMonths.find(item=>item.month>todayMonth) || courseMonths.at(-1);
+let semester = String(initialMonth.semester);
+let currentMonthIndex = courseMonths.filter(item=>item.semester===initialMonth.semester).findIndex(item=>item.month===initialMonth.month);
 let lastDetailTrigger = null;
 const selected = () => window.courses.filter(c => c.semester === Number(semester));
 const items = () => selected().flatMap(course => course.sessions.map(session => ({...session,course}))).sort((a,b) => `${a.date}${a.start}`.localeCompare(`${b.date}${b.start}`));
@@ -13,7 +18,7 @@ function calendarView(all) {
   const months = [...new Set(all.map(item => item.date.slice(0,7)))];
   currentMonthIndex = Math.max(0,Math.min(currentMonthIndex,months.length-1));
   const month = months[currentMonthIndex];
-  const today = new Date().toISOString().slice(0,10);
+  const today = localISO();
   const weekdayHeaders = ['一','二','三','四','五','六','日'];
   const [year,monthNumber] = month.split('-').map(Number);
   const days = new Date(year,monthNumber,0).getDate();
@@ -85,6 +90,7 @@ document.querySelector('#calendar').addEventListener('click', event => {
 document.querySelector('#closeDetails').addEventListener('click',closeDetails);
 document.querySelector('#detailBackdrop').addEventListener('click',closeDetails);
 document.addEventListener('keydown',event=>{if(event.key==='Escape') closeDetails();});
+document.querySelector('#semester').value=semester;
 document.querySelectorAll('.tabs button').forEach(button => button.addEventListener('click', () => {
   document.querySelectorAll('.tabs button,.panel').forEach(el=>el.classList.remove('active'));
   button.classList.add('active'); document.querySelector(`#${button.dataset.tab}`).classList.add('active');
