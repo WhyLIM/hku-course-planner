@@ -3,6 +3,7 @@ const s = (date, start, end, title, venue = '', teacher = '', kind = 'lecture', 
 window.courses = [
   {
     code: 'MSBS7101', title: 'Essential Skills in High-throughput Sequencing Data Analysis', semester: 1, color: '#0f766e',
+    moodle: 'https://moodle.hku.hk/course/view.php?id=145435',
     coordinator: 'Course teaching team', mode: 'Face-to-face / online consultation', venue: 'LT1 / LT2 / SR2-SR3, Faculty of Medicine Building',
     assessment: 'Examination: 8 Dec 2026, 18:30-20:30',
     sessions: [
@@ -24,6 +25,7 @@ window.courses = [
   },
   {
     code: 'MSBS7102', title: 'Foundations in Biomedical Data Science', semester: 1, color: '#2563eb',
+    moodle: 'https://moodle.hku.hk/course/view.php?id=145436',
     coordinator: 'Prof. Yuanhua Huang', mode: 'Face-to-face / online', venue: 'LT2, HKJC-S1A/S1B, LT3/LT4, 3SR rooms and SR2/SR3',
     assessment: 'Examination: 11 Dec 2026, 18:30-20:30', note: 'The 30 Oct lecture title is blank in the source timetable.',
     sessions: [
@@ -77,6 +79,7 @@ window.courses = [
   },
   {
     code: 'PAED7902', title: 'Introduction to Genomic Medicine and Precision Health', semester: 1, color: '#db2777',
+    moodle: 'https://moodle.hku.hk/course/view.php?id=143575',
     coordinator: 'Prof. Yang Wanling · yangwl@hku.hk', mode: 'Face-to-face', venue: 'William MW Mong Block and No. 3 Sassoon Road venues',
     assessment: 'Final examination: 19 Dec 2026, 14:00-16:00 · Venue TBC, HKU Main Campus', note: 'Four reading assignments and accompanying journal clubs are organised throughout the course.',
     sessions: [
@@ -95,6 +98,7 @@ window.courses = [
   },
   {
     code: 'PATH7904', title: 'Fundamentals of Common Human Diseases', semester: 1, color: '#ea580c',
+    moodle: 'https://moodle.hku.hk/course/view.php?id=147175',
     coordinator: 'Prof. PPC Ip · philipip@pathology.hku.hk', mode: 'Face-to-face', venue: 'Room 06-035, 6/F, Block T, Queen Mary Hospital',
     assessment: 'Final examination: 17 Dec 2026, 09:30-11:30 · Venue TBC, HKU Main Campus', note: 'Includes a 2-hour e-learning activity on objectives, essay topic selection and assignment instructions.',
     sessions: [
