@@ -47,6 +47,7 @@ window.courses = [
   },
   {
     code: 'MSPH7901', title: 'Introduction to Biostatistics', semester: 1, color: '#7c3aed',
+    moodle: 'https://moodle.hku.hk/course/view.php?id=145150',
     coordinator: 'Prof. Sheikh Taslim Ali · alist15@hku.hk', mode: 'Face-to-face', venue: 'LT3&4, 3SR-LT1, LT1, LT2, QTLT and examination rooms',
     assessment: 'Assignments 25% · Mid-term 25% · Final examination 50%', note: 'Red entries in the source are alternative practical/tutorial class times; select the assigned class only.',
     sessions: [
