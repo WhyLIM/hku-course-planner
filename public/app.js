@@ -81,6 +81,7 @@ function render() {
   document.querySelector('#load').innerHTML=loadView(all);
   document.querySelector('#courses').innerHTML=courseView(list);
   renderAssignments(Number(semester));
+  renderUrgentAssignment(Number(semester));
 }
 
 document.querySelector('#semester').addEventListener('change', e => { semester=e.target.value; currentMonthIndex=0; closeDetails(); render(); });

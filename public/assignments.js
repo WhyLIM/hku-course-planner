@@ -43,6 +43,23 @@ function assignmentTiming(task) {
   return remaining < 86400000 ? `距截止不足 ${Math.max(1,Math.ceil(remaining/3600000))} 小时` : `距截止 ${Math.ceil(remaining/86400000)} 天`;
 }
 
+function nextAssignment(term,now=Date.now()) {
+  return assignmentItems(term).filter(task=>task.due && Date.parse(task.due)>now)
+    .sort((a,b)=>Date.parse(a.due)-Date.parse(b.due))[0] || null;
+}
+
+function renderUrgentAssignment(term,now=Date.now()) {
+  const banner=document.querySelector('#urgentBanner');
+  const task=nextAssignment(term,now);
+  banner.hidden=!task;
+  if(!task) return;
+  const course=window.courses.find(course=>course.code===task.courseCode);
+  banner.style.setProperty('--course',course.color);
+  document.querySelector('#urgentTitle').textContent=task.title;
+  document.querySelector('#urgentMeta').textContent=`${task.courseCode} · ${assignmentDate(task.due)} 香港时间 · ${assignmentTiming(task)}`;
+  document.querySelector('#urgentAction').dataset.assignmentId=task.id;
+}
+
 function assignmentCalendar(date,term) {
   return assignmentItems(term).filter(task=>task.due?.startsWith(date)).map(task=>{
     const course = window.courses.find(c=>c.code===task.courseCode);
@@ -77,6 +94,7 @@ document.querySelector('#assignmentList').addEventListener('click',event=>{
   const button=event.target.closest('[data-assignment-id]');
   if(button) openAssignment(button.dataset.assignmentId,button);
 });
+document.querySelector('#urgentAction').addEventListener('click',event=>openAssignment(event.currentTarget.dataset.assignmentId,event.currentTarget));
 
 function importAssignmentText(text) {
   const status=document.querySelector('#assignmentImportStatus');
@@ -117,7 +135,11 @@ window.addEventListener('storage',event=>{
     render();
   } catch { document.querySelector('#assignmentImportStatus').textContent='自动更新数据无效，已保留当前显示。'; }
 });
-setInterval(()=>renderAssignments(Number(document.querySelector('#semester').value)),60000);
+setInterval(()=>{
+  const term=Number(document.querySelector('#semester').value);
+  renderAssignments(term);
+  renderUrgentAssignment(term);
+},60000);
 
 let assignmentRefreshPending = false;
 async function refreshPublicAssignments() {
@@ -138,7 +160,11 @@ async function refreshPublicAssignments() {
     try { localStorage.setItem(assignmentStorageKey,JSON.stringify(next)); }
     catch { assignmentStorageError='当前浏览器无法缓存；在线数据仍正常显示。'; }
     if(changed) { closeDetails();render(); }
-    else renderAssignments(Number(document.querySelector('#semester').value));
+    else {
+      const term=Number(document.querySelector('#semester').value);
+      renderAssignments(term);
+      renderUrgentAssignment(term);
+    }
     status.textContent='已读取公开快照 · 页面每 5 分钟检查网站更新。Moodle 最近核对时间见上方。';
   } catch {
     status.textContent=assignmentSnapshot?'公开快照暂时无法更新，已保留当前数据；稍后自动重试。':'公开快照暂时无法加载，请稍后重试或导入备用快照。';

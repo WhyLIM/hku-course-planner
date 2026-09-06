@@ -5,7 +5,7 @@ const assert = require('node:assert/strict');
 async function check(storageBlocked = false) {
   const elements = new Map();
   const element = key => {
-    if(!elements.has(key)) elements.set(key,{innerHTML:'',textContent:'',value:'1',classList:{add(){},remove(){}},addEventListener(){},setAttribute(){},focus(){}});
+    if(!elements.has(key)) elements.set(key,{innerHTML:'',textContent:'',value:'1',hidden:false,dataset:{},style:{setProperty(){}},classList:{add(){},remove(){}},addEventListener(){},setAttribute(){},focus(){}});
     return elements.get(key);
   };
   let source = fs.readFileSync('public/assignments.json','utf8');
@@ -22,6 +22,11 @@ async function check(storageBlocked = false) {
   await handlers.DOMContentLoaded();
   assert.equal(calls,1,'loads automatically without import');
   assert.equal(ctx.assignmentItems(1).length,7);
+  assert.equal(ctx.nextAssignment(1,Date.parse('2026-09-06T12:00:00+08:00')).id,'msph7901-assign-4207273');
+  ctx.renderUrgentAssignment(1,Date.parse('2026-09-06T12:00:00+08:00'));
+  assert.equal(element('#urgentBanner').hidden,false);
+  assert.equal(element('#urgentTitle').textContent,'Bonus Assignment');
+  assert.equal(element('#urgentAction').dataset.assignmentId,'msph7901-assign-4207273');
   assert.equal(element('#sessionCount').textContent,61);
   assert.match(element('#assignmentSyncStatus').textContent,/已读取公开/);
   const next=JSON.parse(source);
