@@ -3,6 +3,12 @@ const vm = require('node:vm');
 const assert = require('node:assert/strict');
 
 async function check(storageBlocked = false) {
+  const indexSource = fs.readFileSync('public/index.html','utf8');
+  const appSource = fs.readFileSync('public/app.js','utf8');
+  assert.match(indexSource,/<h1 id="headline">秋季课表<\/h1>/);
+  assert.doesNotMatch(indexSource,/星期负荷|data-tab="load"|id="load"/);
+  assert.ok(appSource.includes("?'秋季课表':'春季课表'"));
+  assert.doesNotMatch(appSource,/loadView|#load/);
   const elements = new Map();
   const element = key => {
     if(!elements.has(key)) elements.set(key,{innerHTML:'',textContent:'',value:'1',hidden:false,dataset:{},style:{setProperty(){}},classList:{add(){},remove(){}},addEventListener(){},setAttribute(){},focus(){}});
@@ -28,6 +34,7 @@ async function check(storageBlocked = false) {
   assert.equal(element('#urgentTitle').textContent,'Bonus Assignment');
   assert.equal(element('#urgentAction').dataset.assignmentId,'msph7901-assign-4207273');
   assert.equal(element('#sessionCount').textContent,61);
+  assert.equal(element('#headline').textContent,'秋季课表');
   assert.match(element('#assignmentSyncStatus').textContent,/已读取公开/);
   const next=JSON.parse(source);
   next.tasks[0].due='2026-09-30T23:59:00+08:00';

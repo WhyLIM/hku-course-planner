@@ -60,25 +60,18 @@ function closeDetails() {
   lastDetailTrigger?.focus();
 }
 
-function loadView(all) {
-  const rows = weekdays.map((day,index) => { const list=all.filter(x => dateInfo(x.date).index===index && !x.optional); return {day,sessions:list.length,hours:list.reduce((n,x)=>n+duration(x),0)}; }).filter(x=>x.sessions);
-  const max=Math.max(...rows.map(x=>x.hours),1);
-  return `<div class="load-panel"><div class="load-intro"><span>按固定课次统计</span><strong>星期负荷</strong><p>可选 practical/tutorial 班次未计入，避免重复。</p></div><div class="bars">${rows.map(x=>`<div class="bar-row"><span>${x.day}</span><div class="bar-track"><i style="width:${Math.max(7,x.hours/max*100)}%"></i></div><strong>${x.hours}h</strong><small>${x.sessions} 次</small></div>`).join('')}</div></div>`;
-}
-
 function courseView(list) {
   return `<div class="course-grid">${list.map(course => { const fixed=course.sessions.filter(x=>!x.optional); const hours=fixed.reduce((n,x)=>n+duration(x),0); return `<article class="course-card" style="--course:${course.color}"><div class="course-top"><span>${esc(course.code)}</span><b>SEM ${course.semester}</b></div><h3>${esc(course.title)}</h3><div class="metric-line"><strong>${fixed.length}</strong><span>固定课次</span><strong>${hours}h</strong><span>课表时长</span></div><dl><div><dt>负责人</dt><dd>${esc(course.coordinator)}</dd></div><div><dt>形式</dt><dd>${esc(course.mode)}</dd></div><div><dt>地点</dt><dd>${esc(course.venue)}</dd></div>${course.assessment?`<div><dt>考核</dt><dd>${esc(course.assessment)}</dd></div>`:''}</dl>${course.note?`<p class="source-note">${esc(course.note)}</p>`:''}${moodleLink(course)}</article>`; }).join('')}</div>`;
 }
 
 function render() {
   const list=selected(), all=items(), fixed=all.filter(x=>!x.optional);
-  document.querySelector('#headline').textContent=semester==='1'?'秋季课表，一眼掌握':'春季课表，循序展开';
+  document.querySelector('#headline').textContent=semester==='1'?'秋季课表':'春季课表';
   document.querySelector('#courseCount').textContent=list.length;
   document.querySelector('#sessionCount').textContent=fixed.length;
   document.querySelector('#hourCount').textContent=fixed.reduce((n,x)=>n+duration(x),0);
   document.querySelector('#examCount').textContent=fixed.filter(x=>x.kind==='exam').length;
   document.querySelector('#calendar').innerHTML=calendarView(all);
-  document.querySelector('#load').innerHTML=loadView(all);
   document.querySelector('#courses').innerHTML=courseView(list);
   renderAssignments(Number(semester));
   if(typeof renderAnnouncements==='function') renderAnnouncements(Number(semester));

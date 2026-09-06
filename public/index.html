@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="HKU 2026–2027 已选课程日历、星期负荷与课程详情">
+  <meta name="description" content="HKU 2026–2027 已选课程日历、公告、作业与课程详情">
   <title>HKU 课程时间表 2026–2027</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260907">
+  <link rel="stylesheet" href="styles.css?v=20260907-2">
 </head>
 <body>
   <main>
@@ -18,7 +18,7 @@
         <div class="term-control"><label for="semester">当前学期</label><select id="semester"><option value="1">第一学期 · 2026 秋</option><option value="2">第二学期 · 2027 春</option></select></div>
       </header>
       <section class="overview">
-        <div class="overview-title"><span>✦ MY STUDY MAP</span><h1 id="headline">秋季课表，一眼掌握</h1><p>将已选课程的课堂、实践、复习与考试统一到清晰的月历中。</p></div>
+        <div class="overview-title"><span>✦ MY STUDY MAP</span><h1 id="headline">秋季课表</h1><p>将已选课程的课堂、实践、复习与考试统一到清晰的月历中。</p></div>
         <div class="stat"><i>◫</i><strong id="courseCount">0</strong><span>门课程</span></div>
         <div class="stat"><i>▦</i><strong id="sessionCount">0</strong><span>固定课次</span></div>
         <div class="stat"><i>◷</i><strong id="hourCount">0</strong><span>总小时</span></div>
@@ -31,10 +31,9 @@
       <button id="urgentAction" type="button">查看详情</button>
     </section>
     <nav class="tabs" aria-label="课表视图">
-      <button class="active" data-tab="calendar">日历</button><button data-tab="announcements">课程公告</button><button data-tab="assignments">作业与截止日期</button><button data-tab="load">星期负荷</button><button data-tab="courses">课程详情</button>
+      <button class="active" data-tab="calendar">日历</button><button data-tab="announcements">课程公告</button><button data-tab="assignments">作业与截止日期</button><button data-tab="courses">课程详情</button>
     </nav>
     <section id="calendar" class="panel active"></section>
-    <section id="load" class="panel"></section>
     <section id="courses" class="panel"></section>
     <section id="announcements" class="panel">
       <div class="assignment-toolbar"><p id="announcementSummary" role="status"></p><p>仅展示面向全班的公告摘要，不包含个人账户或提交信息。</p></div>
@@ -66,6 +65,6 @@
   <script src="data.js?v=20260904-2"></script>
   <script src="assignments.js?v=20260907"></script>
   <script src="announcements.js?v=20260907"></script>
-  <script src="app.js?v=20260907"></script>
+  <script src="app.js?v=20260907-2"></script>
 </body>
 </html>
