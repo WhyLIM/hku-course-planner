@@ -81,6 +81,7 @@ function render() {
   document.querySelector('#load').innerHTML=loadView(all);
   document.querySelector('#courses').innerHTML=courseView(list);
   renderAssignments(Number(semester));
+  if(typeof renderAnnouncements==='function') renderAnnouncements(Number(semester));
   renderUrgentAssignment(Number(semester));
 }
 

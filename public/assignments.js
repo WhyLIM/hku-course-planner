@@ -51,13 +51,21 @@ function nextAssignment(term,now=Date.now()) {
 function renderUrgentAssignment(term,now=Date.now()) {
   const banner=document.querySelector('#urgentBanner');
   const task=nextAssignment(term,now);
-  banner.hidden=!task;
-  if(!task) return;
-  const course=window.courses.find(course=>course.code===task.courseCode);
+  const notice=typeof nextAnnouncementDeadline==='function'?nextAnnouncementDeadline(term,now):null;
+  const noticeIsNext=notice && (!task || Date.parse(notice.keyDate.at)<Date.parse(task.due));
+  const item=noticeIsNext?notice:task;
+  banner.hidden=!item;
+  if(!item) return;
+  const course=window.courses.find(course=>course.code===item.courseCode);
+  const action=document.querySelector('#urgentAction');
   banner.style.setProperty('--course',course.color);
-  document.querySelector('#urgentTitle').textContent=task.title;
-  document.querySelector('#urgentMeta').textContent=`${task.courseCode} · ${assignmentDate(task.due)} 香港时间 · ${assignmentTiming(task)}`;
-  document.querySelector('#urgentAction').dataset.assignmentId=task.id;
+  document.querySelector('.urgent-label').textContent=noticeIsNext?'下一项重要时间':'下一项截止';
+  document.querySelector('#urgentTitle').textContent=noticeIsNext?notice.keyDate.label:item.title;
+  const due=noticeIsNext?notice.keyDate.at:item.due;
+  document.querySelector('#urgentMeta').textContent=`${item.courseCode} · ${assignmentDate(due)} 香港时间 · ${assignmentTiming({due})}${noticeIsNext?' · 来自课程公告':''}`;
+  delete action.dataset.assignmentId;
+  delete action.dataset.announcementId;
+  action.dataset[noticeIsNext?'announcementId':'assignmentId']=item.id;
 }
 
 function assignmentCalendar(date,term) {
@@ -94,7 +102,11 @@ document.querySelector('#assignmentList').addEventListener('click',event=>{
   const button=event.target.closest('[data-assignment-id]');
   if(button) openAssignment(button.dataset.assignmentId,button);
 });
-document.querySelector('#urgentAction').addEventListener('click',event=>openAssignment(event.currentTarget.dataset.assignmentId,event.currentTarget));
+document.querySelector('#urgentAction').addEventListener('click',event=>{
+  const button=event.currentTarget;
+  if(button.dataset.announcementId) openAnnouncement(button.dataset.announcementId,button);
+  else openAssignment(button.dataset.assignmentId,button);
+});
 
 function importAssignmentText(text) {
   const status=document.querySelector('#assignmentImportStatus');

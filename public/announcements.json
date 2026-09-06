@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "checkedAt": "2026-09-07T00:12:00+08:00",
+  "coverage": "已核对五门课的课程公告论坛。MSBS7101、MSBS7102、PAED7902 和 PATH7904 暂无公告；MSPH7901 当前有 2 则。正文为面向全班的内容摘要，不包含发帖人联系方式或个人账户信息。",
+  "items": [
+    {
+      "id": "moodle-discussion-1045303",
+      "courseCode": "MSPH7901",
+      "title": "Session 1 Materials and Practical 1 Sign up",
+      "publishedAt": "2026-09-03T10:43:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1045303",
+      "body": "此前通知作废，以本公告为准。Session 1（Exploratory Data Analysis）讲义已上传至 Moodle；如有问题，可使用 Moodle 讨论区或参加 office hour。Session 1 上课时请打印 6 页版本讲义，或携带一把同时标有厘米和英寸刻度的 12 英寸直尺。Practical 1 将于 9 月 14 日至 17 日举行；报名开放时间为 9 月 5 日 13:00 至 9 月 12 日 23:59，只需选择并参加其中一个班次。",
+      "priority": "important",
+      "keyDates": [
+        {
+          "label": "Practical 1 报名截止",
+          "at": "2026-09-12T23:59:00+08:00",
+          "kind": "deadline"
+        }
+      ]
+    },
+    {
+      "id": "moodle-discussion-1044152",
+      "courseCode": "MSPH7901",
+      "title": "Welcome to Introduction to Biostatistics!",
+      "publishedAt": "2026-09-01T10:05:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1044152",
+      "body": "课程预习材料已上传至 Moodle，内容包括课程安排、教学团队、考核要求，以及 practical 所需的 R 和 SPSS 入门准备。Practical 0 作业基于这些预习材料；如有问题，请通过 Moodle 联系课程教学团队。",
+      "priority": "normal",
+      "keyDates": []
+    }
+  ]
+}
