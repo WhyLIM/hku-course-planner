@@ -23,7 +23,7 @@ function parseAssignmentSnapshot(text) {
 try {
   const stored = localStorage.getItem(assignmentStorageKey);
   if(stored) assignmentSnapshot = parseAssignmentSnapshot(stored);
-} catch { assignmentStorageError = '本地快照无法读取，请重新导入。'; }
+} catch { assignmentStorageError = '本地缓存无法读取，将尝试获取公开快照。'; }
 
 function assignmentItems(term) {
   return (assignmentSnapshot?.tasks || []).filter(task=>window.courses.find(c=>c.code===task.courseCode)?.semester===term)
@@ -53,11 +53,11 @@ function assignmentCalendar(date,term) {
 function renderAssignments(term) {
   const list = assignmentItems(term);
   const stale = assignmentSnapshot && Date.now()-Date.parse(assignmentSnapshot.checkedAt)>24*3600000;
-  document.querySelector('#assignmentSummary').textContent = assignmentSnapshot ? `${list.length} 项作业／测验 · 最近核对 ${assignmentDate(assignmentSnapshot.checkedAt)} 香港时间${stale?' · 超过 24 小时未核对，请查看 Moodle':''}` : '等待导入 Moodle 作业快照。';
+  document.querySelector('#assignmentSummary').textContent = assignmentSnapshot ? `${list.length} 项作业／测验 · 最近核对 ${assignmentDate(assignmentSnapshot.checkedAt)} 香港时间${stale?' · 超过 24 小时未核对，请查看 Moodle':''}` : '正在获取公开作业快照。';
   document.querySelector('#assignmentList').innerHTML = `${assignmentSnapshot?.coverage?`<p class="assignment-coverage">${esc(assignmentSnapshot.coverage)}</p>`:''}${assignmentStorageError?`<p>${esc(assignmentStorageError)}</p>`:''}${list.length ? list.map(task=>{
     const course = window.courses.find(c=>c.code===task.courseCode);
     return `<article class="assignment-card" style="--course:${course.color}"><div><span>${esc(task.courseCode)}</span><h2>${esc(task.title)}</h2><p>${esc(assignmentDate(task.due))} · 香港时间</p><p>${esc(assignmentTiming(task))}</p></div><button data-assignment-id="${esc(task.id)}">查看详情</button></article>`;
-  }).join('') : '<p class="assignment-empty">当前学期暂无已导入的作业。这不代表 Moodle 中没有待办事项。</p>'}`;
+  }).join('') : '<p class="assignment-empty">当前学期暂无快照作业记录。这不代表 Moodle 中没有待办事项。</p>'}`;
 }
 
 function openAssignment(id,trigger) {
@@ -89,6 +89,7 @@ function importAssignmentText(text) {
     localStorage.setItem(assignmentStorageKey,JSON.stringify(next));
     assignmentSnapshot=next;
     assignmentStorageError='';
+    document.querySelector('#assignmentSyncStatus').textContent='当前显示手动导入的数据；下次同步将以公开快照为准。';
     closeDetails();
     render();
     document.querySelector('#assignmentInput').value='';
@@ -104,7 +105,7 @@ document.querySelector('#assignmentFile').addEventListener('change',async event=
   event.target.value='';
 });
 
-// Refresh other open planner tabs after the local monitor imports a snapshot.
+// Share cached snapshots between open planner tabs.
 window.addEventListener('storage',event=>{
   if(event.key!==assignmentStorageKey || !event.newValue) return;
   try {
@@ -117,3 +118,37 @@ window.addEventListener('storage',event=>{
   } catch { document.querySelector('#assignmentImportStatus').textContent='自动更新数据无效，已保留当前显示。'; }
 });
 setInterval(()=>renderAssignments(Number(document.querySelector('#semester').value)),60000);
+
+let assignmentRefreshPending = false;
+async function refreshPublicAssignments() {
+  if(assignmentRefreshPending) return;
+  assignmentRefreshPending=true;
+  const status=document.querySelector('#assignmentSyncStatus');
+  const button=document.querySelector('#refreshAssignments');
+  button.disabled=true;
+  const controller=new AbortController();
+  const timeout=setTimeout(()=>controller.abort(),15000);
+  try {
+    const response=await fetch('assignments.json',{cache:'no-store',signal:controller.signal});
+    if(!response.ok) throw new Error('无法获取公开快照');
+    const next=parseAssignmentSnapshot(await response.text());
+    const changed=JSON.stringify(next)!==JSON.stringify(assignmentSnapshot);
+    assignmentSnapshot=next;
+    assignmentStorageError='';
+    try { localStorage.setItem(assignmentStorageKey,JSON.stringify(next)); }
+    catch { assignmentStorageError='当前浏览器无法缓存；在线数据仍正常显示。'; }
+    if(changed) { closeDetails();render(); }
+    else renderAssignments(Number(document.querySelector('#semester').value));
+    status.textContent='已读取公开快照 · 页面每 5 分钟检查网站更新。Moodle 最近核对时间见上方。';
+  } catch {
+    status.textContent=assignmentSnapshot?'公开快照暂时无法更新，已保留当前数据；稍后自动重试。':'公开快照暂时无法加载，请稍后重试或导入备用快照。';
+  } finally {
+    clearTimeout(timeout);
+    assignmentRefreshPending=false;
+    button.disabled=false;
+  }
+}
+document.querySelector('#refreshAssignments').addEventListener('click',refreshPublicAssignments);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden) refreshPublicAssignments();});
+setInterval(()=>{if(!document.hidden) refreshPublicAssignments();},5*60000);
+document.addEventListener('DOMContentLoaded',refreshPublicAssignments);

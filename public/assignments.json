@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "checkedAt": "2026-09-06T10:26:00+08:00",
+  "coverage": "已核对五门课的课程首页，以及 MSBS7102 Quiz 1、PAED7902 Assignment 1 和近期日历。尚未逐份核对附件与全部公告。PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
+  "tasks": [
+    {
+      "id": "msbs7101-section-1666655",
+      "courseCode": "MSBS7101",
+      "title": "Assignment provided by Dr. HL Kwan（20%）",
+      "due": "2026-09-29T23:59:00+08:00",
+      "url": "https://moodle.hku.hk/course/section.php?id=1666655",
+      "note": "课程章节标题标注 Due 29 Sept 23:59、占比 20%；年份据 2026 课程确定。章节首页尚未显示具体作业文件或提交活动。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "msbs7102-quiz-4273807",
+      "courseCode": "MSBS7102",
+      "title": "Quiz 1 for grading: Hypothesis testing",
+      "due": null,
+      "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4273807",
+      "note": "页面未显示截止时间。限时 5 分钟；允许 2 次尝试，按首次尝试评分；2 道题共 1 分；课程要求禁止使用 AI 完成测验。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "msph7901-assign-4207273",
+      "courseCode": "MSPH7901",
+      "title": "Bonus Assignment",
+      "due": "2026-09-16T21:00:00+08:00",
+      "opens": "2026-09-02T21:00:00+08:00",
+      "url": "https://moodle.hku.hk/mod/assign/view.php?id=4207273",
+      "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
+      "note": "提交一份 Word：包含 RStudio 与 getwd() 输出截图；完成 Working with R in RStudio 中 task1 或 task2，附代码及输出截图；文档首行写姓名、学号。成功完成可将一个 session 的最低作业成绩补至满分。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "msph7901-assign-4167855",
+      "courseCode": "MSPH7901",
+      "title": "Practical 0 Assignment (mandatory)",
+      "due": "2026-09-17T00:00:00+08:00",
+      "opens": "2026-09-03T00:00:00+08:00",
+      "url": "https://moodle.hku.hk/mod/assign/view.php?id=4167855",
+      "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
+      "note": "按 Pre-practical Assignment 说明上传指定文件。午夜截止：9 月 16 日晚应完成提交。附件具体要求尚未核对。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "msph7901-section-1663036-s1",
+      "courseCode": "MSPH7901",
+      "title": "Assignment S1",
+      "due": "2026-09-22T00:00:00+08:00",
+      "url": "https://moodle.hku.hk/course/section.php?id=1663036",
+      "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
+      "note": "页面显示 Available from 21 September 2026（未显示具体开放时刻），Closes 22 September 2026 12:00 AM。目前锁定，因此保留课程章节入口。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "msph7901-quiz-4201581",
+      "courseCode": "MSPH7901",
+      "title": "Assignment P1",
+      "due": "2026-10-03T23:59:00+08:00",
+      "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4201581",
+      "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
+      "note": "Practical 1 章节中的 Quiz，首页标注 Closes 3 October 2026 11:59 PM；尚未核对测验介绍页。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "paed7902-assign-4211800",
+      "courseCode": "PAED7902",
+      "title": "Assignment 1 · Evolution and Cancer Mutations in TP53",
+      "due": "2026-10-31T00:00:00+08:00",
+      "opens": "2026-09-10T00:00:00+08:00",
+      "url": "https://moodle.hku.hk/mod/assign/view.php?id=4211800",
+      "note": "比较人类与其他脊椎动物 TP53 蛋白序列保守性；找出 5 个癌症突变热点并分析保守性、替换与功能影响；总结 3–5 点观察；讨论大型基因组及癌症数据库的作用（100–200 词）。报告总长约 300–400 词，不含图和参考文献。10 月 31 日 00:00 截止，即 10 月 30 日晚需完成。",
+      "status": "个人提交状态请在 Moodle 查看"
+    }
+  ]
+}
