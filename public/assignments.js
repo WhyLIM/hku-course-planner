@@ -52,7 +52,8 @@ function assignmentCalendar(date,term) {
 
 function renderAssignments(term) {
   const list = assignmentItems(term);
-  document.querySelector('#assignmentSummary').textContent = assignmentSnapshot ? `${list.length} 项作业／测验 · 核对于 ${assignmentDate(assignmentSnapshot.checkedAt)} 香港时间 · 非自动同步` : '导入 Moodle 作业快照后，可在这里和月历查看截止日期。';
+  const stale = assignmentSnapshot && Date.now()-Date.parse(assignmentSnapshot.checkedAt)>24*3600000;
+  document.querySelector('#assignmentSummary').textContent = assignmentSnapshot ? `${list.length} 项作业／测验 · 最近核对 ${assignmentDate(assignmentSnapshot.checkedAt)} 香港时间${stale?' · 超过 24 小时未核对，请查看 Moodle':''}` : '等待导入 Moodle 作业快照。';
   document.querySelector('#assignmentList').innerHTML = `${assignmentSnapshot?.coverage?`<p class="assignment-coverage">${esc(assignmentSnapshot.coverage)}</p>`:''}${assignmentStorageError?`<p>${esc(assignmentStorageError)}</p>`:''}${list.length ? list.map(task=>{
     const course = window.courses.find(c=>c.code===task.courseCode);
     return `<article class="assignment-card" style="--course:${course.color}"><div><span>${esc(task.courseCode)}</span><h2>${esc(task.title)}</h2><p>${esc(assignmentDate(task.due))} · 香港时间</p><p>${esc(assignmentTiming(task))}</p></div><button data-assignment-id="${esc(task.id)}">查看详情</button></article>`;
@@ -81,6 +82,10 @@ function importAssignmentText(text) {
   const status=document.querySelector('#assignmentImportStatus');
   try {
     const next=parseAssignmentSnapshot(text);
+    if(assignmentSnapshot && Date.parse(next.checkedAt)<Date.parse(assignmentSnapshot.checkedAt)) {
+      status.textContent='未更新：此快照早于当前数据，请使用最新快照。';
+      return;
+    }
     localStorage.setItem(assignmentStorageKey,JSON.stringify(next));
     assignmentSnapshot=next;
     assignmentStorageError='';
@@ -98,3 +103,17 @@ document.querySelector('#assignmentFile').addEventListener('change',async event=
   catch { document.querySelector('#assignmentImportStatus').textContent='文件读取失败，请重试。'; }
   event.target.value='';
 });
+
+// Refresh other open planner tabs after the local monitor imports a snapshot.
+window.addEventListener('storage',event=>{
+  if(event.key!==assignmentStorageKey || !event.newValue) return;
+  try {
+    const next=parseAssignmentSnapshot(event.newValue);
+    if(assignmentSnapshot && Date.parse(next.checkedAt)<Date.parse(assignmentSnapshot.checkedAt)) return;
+    assignmentSnapshot=next;
+    assignmentStorageError='';
+    closeDetails();
+    render();
+  } catch { document.querySelector('#assignmentImportStatus').textContent='自动更新数据无效，已保留当前显示。'; }
+});
+setInterval(()=>renderAssignments(Number(document.querySelector('#semester').value)),60000);
