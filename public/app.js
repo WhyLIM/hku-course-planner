@@ -15,7 +15,8 @@ const selected = () => window.courses.filter(c => c.semester === Number(semester
 const items = () => selected().flatMap(course => course.sessions.map(session => ({...session,course}))).sort((a,b) => `${a.date}${a.start}`.localeCompare(`${b.date}${b.start}`));
 
 function calendarView(all) {
-  const months = [...new Set(all.map(item => item.date.slice(0,7)))];
+  const deadlines = assignmentItems(Number(semester));
+  const months = [...new Set([...all.map(item => item.date.slice(0,7)),...deadlines.filter(x=>x.due).map(x=>x.due.slice(0,7))])].sort();
   currentMonthIndex = Math.max(0,Math.min(currentMonthIndex,months.length-1));
   const month = months[currentMonthIndex];
   const today = localISO();
@@ -32,7 +33,7 @@ function calendarView(all) {
       const itemIndex=all.indexOf(item);
       const details=[item.title,item.venue,item.teacher].filter(Boolean).join(' · ');
       return `<button class="calendar-event ${item.optional?'is-optional':''} ${item.kind==='exam'?'is-exam':''}" style="--course:${item.course.color}" data-item-index="${itemIndex}" title="${esc(details)}"><div><span>${item.start}</span><strong>${esc(item.course.code)}</strong></div><p>${esc(item.title)}</p>${item.optional?'<em>可选</em>':''}${item.kind==='exam'?'<em>考试</em>':''}</button>`;
-    }).join('')}</div></div>`;
+    }).join('')}${assignmentCalendar(iso,Number(semester))}</div></div>`;
   }).join('');
   return `<div class="calendar-stack"><section class="month-card"><header><div><span>${year}</span><h2>${monthNumber}月</h2></div><div class="month-tools"><strong>${all.filter(item=>item.date.startsWith(month)).length} 个安排</strong><div class="month-nav"><button data-month-step="-1" aria-label="上个月" ${currentMonthIndex===0?'disabled':''}>‹</button><span>${currentMonthIndex+1} / ${months.length}</span><button data-month-step="1" aria-label="下个月" ${currentMonthIndex===months.length-1?'disabled':''}>›</button></div></div></header><div class="weekday-row">${weekdayHeaders.map(day=>`<span>${day}</span>`).join('')}</div><div class="month-grid">${cells}</div></section></div>`;
 }
@@ -79,10 +80,13 @@ function render() {
   document.querySelector('#calendar').innerHTML=calendarView(all);
   document.querySelector('#load').innerHTML=loadView(all);
   document.querySelector('#courses').innerHTML=courseView(list);
+  renderAssignments(Number(semester));
 }
 
 document.querySelector('#semester').addEventListener('change', e => { semester=e.target.value; currentMonthIndex=0; closeDetails(); render(); });
 document.querySelector('#calendar').addEventListener('click', event => {
+  const assignmentButton=event.target.closest('[data-assignment-id]');
+  if(assignmentButton) { openAssignment(assignmentButton.dataset.assignmentId,assignmentButton); return; }
   const monthButton=event.target.closest('[data-month-step]');
   if(monthButton) { currentMonthIndex+=Number(monthButton.dataset.monthStep); closeDetails(); document.querySelector('#calendar').innerHTML=calendarView(items()); return; }
   const courseButton=event.target.closest('[data-item-index]');

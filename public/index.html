@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=20260904-2">
+  <link rel="stylesheet" href="styles.css?v=20260906">
 </head>
 <body>
   <main>
@@ -26,11 +26,24 @@
       </section>
     </div>
     <nav class="tabs" aria-label="课表视图">
-      <button class="active" data-tab="calendar">日历</button><button data-tab="load">星期负荷</button><button data-tab="courses">课程详情</button>
+      <button class="active" data-tab="calendar">日历</button><button data-tab="assignments">作业与截止日期</button><button data-tab="load">星期负荷</button><button data-tab="courses">课程详情</button>
     </nav>
     <section id="calendar" class="panel active"></section>
     <section id="load" class="panel"></section>
     <section id="courses" class="panel"></section>
+    <section id="assignments" class="panel">
+      <div class="assignment-toolbar">
+        <p id="assignmentSummary" role="status"></p>
+        <details><summary>导入作业快照</summary>
+          <p>选择从 Moodle 整理的 JSON 文件，或粘贴其内容。导入会替换旧快照；仅保存在当前浏览器，不上传到网站。不同设备需分别导入。</p>
+          <input id="assignmentFile" type="file" accept=".json,application/json" aria-label="选择作业快照文件">
+          <label for="assignmentInput">快照内容</label><textarea id="assignmentInput" rows="4" spellcheck="false"></textarea>
+          <button id="importAssignments" type="button">保存到此浏览器</button>
+          <p id="assignmentImportStatus" role="status"></p>
+        </details>
+      </div>
+      <div id="assignmentList"></div>
+    </section>
     <footer><span>整理自所提供的 6 份课程附件</span><span>更新基准 · 2026-09-03</span></footer>
   </main>
   <div id="detailBackdrop" class="detail-backdrop" hidden></div>
@@ -39,6 +52,7 @@
     <div id="detailContent"></div>
   </aside>
   <script src="data.js?v=20260904-2"></script>
-  <script src="app.js?v=20260904"></script>
+  <script src="assignments.js?v=20260906"></script>
+  <script src="app.js?v=20260906"></script>
 </body>
 </html>
