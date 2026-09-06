@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "vinext dev",
     "build": "vinext build",
+    "sync:calendar": "node --env-file-if-exists=.env scripts/sync-moodle-calendar.mjs --dry-run",
+    "test:calendar": "node tests/calendar-sync.test.mjs",
     "start": "wrangler dev --config dist/server/wrangler.json",
     "lint": "oxlint",
     "format": "oxfmt"
