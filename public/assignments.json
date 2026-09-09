@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-07T12:23:00+08:00",
-  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前 7 项公开作业记录没有日期变化。PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
+  "checkedAt": "2026-09-09T20:01:00+08:00",
+  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 10 项作业、测验或报名活动。新增 MSPH7901 Practical 1 报名截止、Assignment S2 开放时间及 Practical 2 报名开放时间。PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
   "tasks": [
     {
       "id": "msbs7101-section-1666655",
@@ -19,6 +19,17 @@
       "due": null,
       "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4273807",
       "note": "页面未显示截止时间。限时 5 分钟；允许 2 次尝试，按首次尝试评分；2 道题共 1 分；课程要求禁止使用 AI 完成测验。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "moodle-calendar-10932970",
+      "calendarUid": "10932970@moodle.hku.hk",
+      "courseCode": "MSPH7901",
+      "title": "Practical 1 session sign up",
+      "due": "2026-09-13T23:59:00+08:00",
+      "url": "https://moodle.hku.hk/course/view.php?id=145150",
+      "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
+      "note": "Moodle 报名活动页显示 9 月 13 日 23:59 截止；可选场次为 9 月 14 日 16:30–18:30、9 月 16 日 13:00–15:00 或 9 月 17 日 18:30–20:30。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {
@@ -61,6 +72,30 @@
       "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4201581",
       "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
       "note": "Practical 1 章节中的 Quiz，首页标注 Closes 3 October 2026 11:59 PM；尚未核对测验介绍页。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "moodle-calendar-10952231",
+      "calendarUid": "10952231@moodle.hku.hk",
+      "courseCode": "MSPH7901",
+      "title": "Assignment S2",
+      "due": null,
+      "opens": "2026-09-13T10:10:00+08:00",
+      "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4281168",
+      "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
+      "note": "Moodle 页面仅显示 9 月 13 日 10:10 开放，尚未显示截止时间；当前不可作答。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "moodle-calendar-10943493",
+      "calendarUid": "10943493@moodle.hku.hk",
+      "courseCode": "MSPH7901",
+      "title": "Practical 2 Session Sign-up",
+      "due": null,
+      "opens": "2026-09-24T23:59:00+08:00",
+      "url": "https://moodle.hku.hk/course/view.php?id=145150",
+      "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
+      "note": "Moodle 报名活动页仅显示 9 月 24 日 23:59 开放，尚未显示截止时间；可选场次为 10 月 21 日 18:30–20:30、10 月 22 日 11:00–13:00 或 10 月 23 日 18:30–20:30。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {

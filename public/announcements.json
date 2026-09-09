@@ -1,20 +1,72 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-07T12:23:00+08:00",
-  "coverage": "已核对五门课的课程公告论坛。MSBS7101、MSBS7102、PAED7902 和 PATH7904 暂无公告；MSPH7901 当前有 2 则。正文为面向全班的内容摘要，不包含发帖人联系方式或个人账户信息。",
+  "checkedAt": "2026-09-09T20:01:00+08:00",
+  "coverage": "已核对五门课的课程公告论坛。MSBS7101、MSBS7102、PAED7902 和 PATH7904 暂无公告；MSPH7901 当前有 5 则。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
   "items": [
+    {
+      "id": "moodle-discussion-1048284",
+      "courseCode": "MSPH7901",
+      "title": "Session 2 materials uploaded",
+      "publishedAt": "2026-09-09T14:02:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1048284",
+      "body": "Session 2（Correlation and regression）的讲义和 Concept Note 已上传至 Moodle。课程将于 9 月 12 日 08:30 举行；建议课前阅读 Concept Note，并按课堂要求完成签到。",
+      "priority": "normal",
+      "keyDates": [
+        {
+          "label": "Session 2 上课",
+          "at": "2026-09-12T08:30:00+08:00",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "moodle-discussion-1048119",
+      "courseCode": "MSPH7901",
+      "title": "Practical 1 material uploaded",
+      "publishedAt": "2026-09-09T10:02:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1048119",
+      "body": "Practical 1 的数据集和练习题已上传至 Moodle。参加前应确认个人电脑上的 R 与 SPSS 可正常运行，并建议预先阅读 R 入门幻灯片。Assignment P0 是参加 Practical 1 的强制最低要求。",
+      "priority": "important",
+      "keyDates": []
+    },
+    {
+      "id": "moodle-discussion-1047668",
+      "courseCode": "MSPH7901",
+      "title": "Assignment P0, Bonus Assignment and Assignment S1 have been uploaded to Moodle.",
+      "publishedAt": "2026-09-08T14:26:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1047668",
+      "body": "Assignment P0、Bonus Assignment 和 Assignment S1 已上传。P0 是参加 Practical 1 的强制最低要求；完成 Bonus Assignment 前应阅读 Moodle 中的 Working with R in RStudio 幻灯片。公告列出的日期以各活动页面当前显示的精确时间为准；超过截止时间一周的迟交将不获接受。",
+      "priority": "important",
+      "keyDates": [
+        {
+          "label": "Bonus Assignment 截止",
+          "at": "2026-09-16T21:00:00+08:00",
+          "kind": "deadline"
+        },
+        {
+          "label": "Practical 0 Assignment 截止",
+          "at": "2026-09-17T00:00:00+08:00",
+          "kind": "deadline"
+        },
+        {
+          "label": "Assignment S1 截止",
+          "at": "2026-09-22T00:00:00+08:00",
+          "kind": "deadline"
+        }
+      ]
+    },
     {
       "id": "moodle-discussion-1045303",
       "courseCode": "MSPH7901",
       "title": "Session 1 Materials and Practical 1 Sign up",
       "publishedAt": "2026-09-03T10:43:00+08:00",
       "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1045303",
-      "body": "此前通知作废，以本公告为准。Session 1（Exploratory Data Analysis）讲义已上传至 Moodle；如有问题，可使用 Moodle 讨论区或参加 office hour。Session 1 上课时请打印 6 页版本讲义，或携带一把同时标有厘米和英寸刻度的 12 英寸直尺。Practical 1 将于 9 月 14 日至 17 日举行；报名开放时间为 9 月 5 日 13:00 至 9 月 12 日 23:59，只需选择并参加其中一个班次。",
+      "body": "此前通知作废，以本公告为准。Session 1（Exploratory Data Analysis）讲义已上传至 Moodle；如有问题，可使用 Moodle 讨论区或参加 office hour。Session 1 上课时请打印 6 页版本讲义，或携带一把同时标有厘米和英寸刻度的 12 英寸直尺。Practical 1 将于 9 月 14 日至 17 日举行；原公告写明报名至 9 月 12 日 23:59，Moodle 报名活动页现显示延长至 9 月 13 日 23:59，以活动页为准。只需选择并参加其中一个班次。",
       "priority": "important",
       "keyDates": [
         {
           "label": "Practical 1 报名截止",
-          "at": "2026-09-12T23:59:00+08:00",
+          "at": "2026-09-13T23:59:00+08:00",
           "kind": "deadline"
         }
       ]
