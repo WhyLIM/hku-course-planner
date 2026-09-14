@@ -1,8 +1,40 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-09T20:01:00+08:00",
-  "coverage": "已核对五门课的课程公告论坛。MSBS7101、MSBS7102、PAED7902 和 PATH7904 暂无公告；MSPH7901 当前有 5 则。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
+  "checkedAt": "2026-09-14T16:08:00+08:00",
+  "coverage": "已核对五门课的课程公告论坛。MSBS7101 当前有 1 则，MSPH7901 当前有 6 则；MSBS7102、PAED7902 和 PATH7904 暂无公告。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
   "items": [
+    {
+      "id": "moodle-discussion-1050721",
+      "courseCode": "MSBS7101",
+      "title": "Google colab set-up before 15 Sept class",
+      "publishedAt": "2026-09-14T10:50:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1050721",
+      "body": "9 月 15 日的课堂将使用 Google Colab 学习基础 Linux/Unix 编程。课前请阅读 Moodle 中的“Pre-lecture for Week 3 - Google Colab set-up”幻灯片，按其中步骤完成设置和基础操作，并确认已能使用自己的 Google 账户连接 Google Colab。",
+      "priority": "important",
+      "keyDates": [
+        {
+          "label": "Introduction to using Linux 上课",
+          "at": "2026-09-15T18:30:00+08:00",
+          "kind": "event"
+        }
+      ]
+    },
+    {
+      "id": "moodle-discussion-1049912",
+      "courseCode": "MSPH7901",
+      "title": "Assignment S2 Uploaded",
+      "publishedAt": "2026-09-12T12:00:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1049912",
+      "body": "Assignment S2 已上传至 Moodle，共 4 道选择题；请在 9 月 26 日 14:00 前完成。",
+      "priority": "important",
+      "keyDates": [
+        {
+          "label": "Assignment S2 截止",
+          "at": "2026-09-26T14:00:00+08:00",
+          "kind": "deadline"
+        }
+      ]
+    },
     {
       "id": "moodle-discussion-1048284",
       "courseCode": "MSPH7901",

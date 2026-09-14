@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-09T20:01:00+08:00",
-  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 10 项作业、测验或报名活动。新增 MSPH7901 Practical 1 报名截止、Assignment S2 开放时间及 Practical 2 报名开放时间。PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
+  "checkedAt": "2026-09-14T16:08:00+08:00",
+  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 11 项作业、测验或报名活动。新增 MSBS7102 Quiz 2，并确认 Quiz 1、MSPH7901 Assignment S1 与 Assignment S2 的当前日期；Practical 2 报名活动目前只显示开放时间，未显示截止时间。PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
   "tasks": [
     {
       "id": "msbs7101-section-1666655",
@@ -14,11 +14,23 @@
     },
     {
       "id": "msbs7102-quiz-4273807",
+      "calendarUid": "10979920@moodle.hku.hk",
       "courseCode": "MSBS7102",
       "title": "Quiz 1 for grading: Hypothesis testing",
-      "due": null,
+      "due": "2026-09-12T19:00:00+08:00",
       "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4273807",
-      "note": "页面未显示截止时间。限时 5 分钟；允许 2 次尝试，按首次尝试评分；2 道题共 1 分；课程要求禁止使用 AI 完成测验。",
+      "note": "Moodle 页面现显示已于 9 月 12 日 19:00 关闭。限时 5 分钟；允许 2 次尝试，按首次尝试评分；2 道题共 1 分；课程要求禁止使用 AI 完成测验。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "moodle-calendar-10980905",
+      "calendarUid": "10980905@moodle.hku.hk",
+      "courseCode": "MSBS7102",
+      "title": "Quiz 2 - linear regression",
+      "due": "2026-09-18T19:30:00+08:00",
+      "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4287650",
+      "sourceName": "SBMS7202_MSBS7102 Foundations in Biomedical Data Science [2026]",
+      "note": "2 道题共 1 分；限时 5 分钟；只允许 1 次尝试；课程要求禁止使用 AI 完成测验。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {
@@ -34,6 +46,7 @@
     },
     {
       "id": "msph7901-assign-4207273",
+      "calendarUid": "10788188@moodle.hku.hk",
       "courseCode": "MSPH7901",
       "title": "Bonus Assignment",
       "due": "2026-09-16T21:00:00+08:00",
@@ -45,6 +58,7 @@
     },
     {
       "id": "msph7901-assign-4167855",
+      "calendarUid": "10661085@moodle.hku.hk",
       "courseCode": "MSPH7901",
       "title": "Practical 0 Assignment (mandatory)",
       "due": "2026-09-17T00:00:00+08:00",
@@ -56,12 +70,13 @@
     },
     {
       "id": "msph7901-section-1663036-s1",
+      "calendarUid": "10767602@moodle.hku.hk",
       "courseCode": "MSPH7901",
       "title": "Assignment S1",
       "due": "2026-09-22T00:00:00+08:00",
-      "url": "https://moodle.hku.hk/course/section.php?id=1663036",
+      "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4201610",
       "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
-      "note": "页面显示 Available from 21 September 2026（未显示具体开放时刻），Closes 22 September 2026 12:00 AM。目前锁定，因此保留课程章节入口。",
+      "note": "Moodle 测验页面显示 9 月 22 日 00:00 关闭，按最高成绩评分；页面当前已提供作答入口。午夜截止意味着应在 9 月 21 日晚完成。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {
@@ -76,14 +91,14 @@
     },
     {
       "id": "moodle-calendar-10952231",
-      "calendarUid": "10952231@moodle.hku.hk",
+      "calendarUid": "10987248@moodle.hku.hk",
       "courseCode": "MSPH7901",
       "title": "Assignment S2",
-      "due": null,
-      "opens": "2026-09-13T10:10:00+08:00",
+      "due": "2026-09-26T14:00:00+08:00",
+      "opens": "2026-09-12T14:00:00+08:00",
       "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4281168",
       "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
-      "note": "Moodle 页面仅显示 9 月 13 日 10:10 开放，尚未显示截止时间；当前不可作答。",
+      "note": "Moodle 页面现显示 9 月 12 日 14:00 开放、9 月 26 日 14:00 截止；共 4 道选择题，按最高成绩评分。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {
@@ -100,6 +115,7 @@
     },
     {
       "id": "paed7902-assign-4211800",
+      "calendarUid": "10791223@moodle.hku.hk",
       "courseCode": "PAED7902",
       "title": "Assignment 1 · Evolution and Cancer Mutations in TP53",
       "due": "2026-10-31T00:00:00+08:00",
