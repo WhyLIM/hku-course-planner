@@ -16,18 +16,18 @@ const ctx=vm.createContext({URL,console,Date,AbortController,setTimeout,clearTim
 for(const file of ['data.js','assignments.js','announcements.js','app.js']) vm.runInContext(fs.readFileSync(`public/${file}`,'utf8'),ctx);
 (async()=>{
   for(const handler of documentHandlers.DOMContentLoaded) await handler();
-  assert.equal(ctx.announcementItems(1).length,7);
+  assert.equal(ctx.announcementItems(1).length,8);
   const next=ctx.nextAnnouncementDeadline(1,Date.parse('2026-09-07T00:00:00+08:00'));
   assert.equal(next.id,'moodle-discussion-1045303');
   assert.equal(next.keyDate.at,'2026-09-13T23:59:00+08:00');
   ctx.renderUrgentAssignment(1,Date.parse('2026-09-07T00:00:00+08:00'));
-  assert.equal(element('#urgentTitle').textContent,'Quiz 1 for grading: Hypothesis testing');
-  assert.equal(element('#urgentAction').dataset.assignmentId,'msbs7102-quiz-4273807');
+  assert.equal(element('#urgentTitle').textContent,'Practical 1 session sign up');
+  assert.equal(element('#urgentAction').dataset.assignmentId,'moodle-calendar-10932970');
   ctx.openAnnouncement(next.id,element('trigger'));
   assert.match(element('#detailContent').innerHTML,/d=1045303/);
   assert.doesNotMatch(element('#detailContent').innerHTML,/@connect\.hku\.hk/);
   const unsafe=JSON.parse(sources['announcements.json']);
   unsafe.items[0].url='https://evil.example/discuss.php?d=1045303';
   assert.throws(()=>ctx.parseAnnouncementSnapshot(JSON.stringify(unsafe)));
-  console.log('PASS: 7 public announcements, forum URL validation, updated deadline banner, no contact details.');
+  console.log('PASS: 8 public announcements, forum URL validation, updated deadline banner, no contact details.');
 })().catch(error=>{console.error(error);process.exitCode=1;});

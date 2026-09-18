@@ -1,8 +1,24 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-14T16:08:00+08:00",
-  "coverage": "已核对五门课的课程公告论坛。MSBS7101 当前有 1 则，MSPH7901 当前有 6 则；MSBS7102、PAED7902 和 PATH7904 暂无公告。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
+  "checkedAt": "2026-09-18T14:11:00+08:00",
+  "coverage": "已核对五门课的课程公告论坛。MSBS7101 当前公开 1 则，MSPH7901 当前公开 7 则课程相关公告；另有 1 则失物招领因不属于课程安排而未公开。MSBS7102、PAED7902 和 PATH7904 暂无公告。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
   "items": [
+    {
+      "id": "moodle-discussion-1052343",
+      "courseCode": "MSPH7901",
+      "title": "Session 3 Materials Uploaded",
+      "publishedAt": "2026-09-16T13:56:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1052343",
+      "body": "Session 3（Probability）的讲义和 Concept Note 已上传至 Moodle。建议在上课前阅读 Concept Note；课后问题可在 Moodle 讨论区提出。",
+      "priority": "normal",
+      "keyDates": [
+        {
+          "label": "Session 3 上课",
+          "at": "2026-09-19T08:30:00+08:00",
+          "kind": "event"
+        }
+      ]
+    },
     {
       "id": "moodle-discussion-1050721",
       "courseCode": "MSBS7101",
