@@ -27,7 +27,7 @@ async function check(storageBlocked = false) {
   for(const file of ['data.js','assignments.js','app.js']) vm.runInContext(fs.readFileSync(`public/${file}`,'utf8'),ctx);
   await handlers.DOMContentLoaded();
   assert.equal(calls,1,'loads automatically without import');
-  assert.equal(ctx.assignmentItems(1).length,12);
+  assert.equal(ctx.assignmentItems(1).length,14);
   assert.equal(ctx.nextAssignment(1,Date.parse('2026-09-06T12:00:00+08:00')).id,'moodle-calendar-10932970');
   ctx.renderUrgentAssignment(1,Date.parse('2026-09-06T12:00:00+08:00'));
   assert.equal(element('#urgentBanner').hidden,false);
@@ -43,10 +43,10 @@ async function check(storageBlocked = false) {
   assert.match(ctx.assignmentCalendar('2026-09-30',1),/data-assignment-id/);
   fail=true;
   await ctx.refreshPublicAssignments();
-  assert.equal(ctx.assignmentItems(1).length,12);
+  assert.equal(ctx.assignmentItems(1).length,14);
   assert.match(element('#assignmentSyncStatus').textContent,/保留/);
   fail=false;source='invalid';
   await ctx.refreshPublicAssignments();
-  assert.equal(ctx.assignmentItems(1).length,12);
+  assert.equal(ctx.assignmentItems(1).length,14);
 }
 (async()=>{await check();await check(true);console.log('PASS: public startup load, refresh, calendar, offline/invalid fallback, storage disabled.');})().catch(error=>{console.error(error);process.exitCode=1;});

@@ -1,8 +1,24 @@
 {
   "version": 1,
-  "checkedAt": "2026-09-18T14:11:00+08:00",
-  "coverage": "已核对五门课的课程公告论坛。MSBS7101 当前公开 1 则，MSPH7901 当前公开 7 则课程相关公告；另有 1 则失物招领因不属于课程安排而未公开。MSBS7102、PAED7902 和 PATH7904 暂无公告。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
+  "checkedAt": "2026-10-01T10:22:00+08:00",
+  "coverage": "已核对五门课的课程公告论坛。MSBS7101 当前公开 1 则，MSPH7901 当前公开 8 则课程相关公告；另有 1 则失物招领因不属于课程安排而未公开。MSBS7102、PAED7902 和 PATH7904 暂无公告。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
   "items": [
+    {
+      "id": "moodle-discussion-1054649",
+      "courseCode": "MSPH7901",
+      "title": "Assignment S3 upload",
+      "publishedAt": "2026-09-21T11:03:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1054649",
+      "body": "Assignment S3 已上传至 Moodle，请在 10 月 2 日 23:59 前完成。",
+      "priority": "important",
+      "keyDates": [
+        {
+          "label": "Assignment S3 截止",
+          "at": "2026-10-02T23:59:00+08:00",
+          "kind": "deadline"
+        }
+      ]
+    },
     {
       "id": "moodle-discussion-1052343",
       "courseCode": "MSPH7901",
