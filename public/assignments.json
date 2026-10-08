@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-06T18:42:00+08:00",
-  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 17 项作业、测验或报名活动。新增 MSBS7102 Quiz 3、Quiz 5 与 PAED7902 Assignment 2；Quiz 5 页面尚未显示开放或截止时间。Practical 2 报名仍未显示截止时间，PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
+  "checkedAt": "2026-10-08T14:40:00+08:00",
+  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 18 项作业、测验或报名活动。新增 MSBS7102 Quiz 6；Quiz 5 和 Quiz 6 页面均尚未显示开放或截止时间。Practical 2 报名仍未显示截止时间，PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
   "tasks": [
     {
       "id": "msbs7101-section-1666655",
@@ -63,6 +63,15 @@
       "due": null,
       "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4313889",
       "note": "课程首页已新增 Quiz 5；活动页尚未显示开放或截止时间。进入测验需要课程提供的密码，按最高成绩评分。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "msbs7102-quiz-4320221",
+      "courseCode": "MSBS7102",
+      "title": "Quiz 6",
+      "due": null,
+      "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4320221",
+      "note": "课程首页已新增 Quiz 6；活动页尚未显示开放或截止时间。进入测验需要课程提供的密码，按最高成绩评分。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {

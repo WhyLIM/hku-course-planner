@@ -16,7 +16,7 @@ const ctx=vm.createContext({URL,console,Date,AbortController,setTimeout,clearTim
 for(const file of ['data.js','assignments.js','announcements.js','app.js']) vm.runInContext(fs.readFileSync(`public/${file}`,'utf8'),ctx);
 (async()=>{
   for(const handler of documentHandlers.DOMContentLoaded) await handler();
-  assert.equal(ctx.announcementItems(1).length,9);
+  assert.equal(ctx.announcementItems(1).length,10);
   const next=ctx.nextAnnouncementDeadline(1,Date.parse('2026-09-07T00:00:00+08:00'));
   assert.equal(next.id,'moodle-discussion-1045303');
   assert.equal(next.keyDate.at,'2026-09-13T23:59:00+08:00');
@@ -29,5 +29,5 @@ for(const file of ['data.js','assignments.js','announcements.js','app.js']) vm.r
   const unsafe=JSON.parse(sources['announcements.json']);
   unsafe.items[0].url='https://evil.example/discuss.php?d=1045303';
   assert.throws(()=>ctx.parseAnnouncementSnapshot(JSON.stringify(unsafe)));
-  console.log('PASS: 9 public announcements, forum URL validation, updated deadline banner, no contact details.');
+  console.log('PASS: 10 public announcements, forum URL validation, updated deadline banner, no contact details.');
 })().catch(error=>{console.error(error);process.exitCode=1;});

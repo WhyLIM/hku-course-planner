@@ -1,8 +1,18 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-06T18:42:00+08:00",
-  "coverage": "已核对五门课的课程公告论坛。MSBS7101 当前公开 1 则，MSPH7901 当前公开 8 则课程相关公告；另有 1 则失物招领因不属于课程安排而未公开。MSBS7102、PAED7902 和 PATH7904 暂无公告。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
+  "checkedAt": "2026-10-08T14:40:00+08:00",
+  "coverage": "已核对五门课的课程公告论坛。MSBS7101 当前公开 1 则，MSPH7901 当前公开 9 则课程相关公告；另有 1 则失物招领因不属于课程安排而未公开。MSBS7102、PAED7902 和 PATH7904 暂无公告。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
   "items": [
+    {
+      "id": "moodle-discussion-1062591",
+      "courseCode": "MSPH7901",
+      "title": "Session 4 Materials Uploaded",
+      "publishedAt": "2026-10-07T13:25:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1062591",
+      "body": "Session 4（Statistical Inference）的讲义和 Concept Note 已上传至 Moodle。建议在上课前阅读 Concept Note。",
+      "priority": "normal",
+      "keyDates": []
+    },
     {
       "id": "moodle-discussion-1054649",
       "courseCode": "MSPH7901",
