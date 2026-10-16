@@ -1,8 +1,39 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-08T14:40:00+08:00",
-  "coverage": "已核对五门课的课程公告论坛。MSBS7101 当前公开 1 则，MSPH7901 当前公开 9 则课程相关公告；另有 1 则失物招领因不属于课程安排而未公开。MSBS7102、PAED7902 和 PATH7904 暂无公告。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
+  "checkedAt": "2026-10-17T01:57:00+08:00",
+  "coverage": "已核对五门课的课程公告论坛。MSBS7101 当前公开 1 则，MSPH7901 当前公开 11 则课程相关公告；另有 1 则失物招领因不属于课程安排而未公开。MSBS7102、PAED7902 和 PATH7904 暂无公告。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
   "items": [
+    {
+      "id": "moodle-discussion-1065115",
+      "courseCode": "MSPH7901",
+      "title": "Session 5 Materials Uploaded",
+      "publishedAt": "2026-10-14T13:32:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1065115",
+      "body": "Session 5（Hypothesis tests）的讲义和 Concept Note 已上传至 Moodle。建议课前阅读 Concept Note；课后问题可在 Moodle 讨论区提出或参加 office hour。公告同时提醒 10 月 24 日上午有期中考试，具体时间以课程安排为准。",
+      "priority": "important",
+      "keyDates": []
+    },
+    {
+      "id": "moodle-discussion-1063957",
+      "courseCode": "MSPH7901",
+      "title": "Practical 2 sign-up and Assignment S4 Uploaded",
+      "publishedAt": "2026-10-10T09:59:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1063957",
+      "body": "Practical 2 报名已开放，所有同学应在第一次 Practical 2 前选择一个场次。公告原写报名截止为 10 月 17 日 23:59，Moodle 活动页现显示延长至 10 月 24 日 23:59，以活动页为准。Assignment S4 也已上传，截止为 10 月 24 日 23:59；逾期将按课程迟交政策处理。",
+      "priority": "important",
+      "keyDates": [
+        {
+          "label": "Practical 2 报名截止",
+          "at": "2026-10-24T23:59:00+08:00",
+          "kind": "deadline"
+        },
+        {
+          "label": "Assignment S4 截止",
+          "at": "2026-10-24T23:59:00+08:00",
+          "kind": "deadline"
+        }
+      ]
+    },
     {
       "id": "moodle-discussion-1062591",
       "courseCode": "MSPH7901",
