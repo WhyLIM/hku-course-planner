@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-19T11:49:00+08:00",
+  "checkedAt": "2026-10-20T14:17:00+08:00",
   "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 20 项作业、测验或报名活动。新增 MSBS7102 Quiz 7 与 MSPH7901 Assignment S5；Assignment S4 及 Practical 2 报名的当前截止时间均为 10 月 24 日 23:59。Quiz 5、Quiz 6 和 Quiz 7 页面尚未显示开放或截止时间。PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
   "tasks": [
     {
