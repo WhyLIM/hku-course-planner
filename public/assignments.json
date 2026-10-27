@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-23T09:11:00+08:00",
-  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 21 项作业、测验或报名活动。新增 MSPH7901 Assignment P2，活动页确认截止为 11 月 7 日 15:31。Assignment S4 及 Practical 2 报名的当前截止时间均为 10 月 24 日 23:59。Quiz 5、Quiz 6 和 Quiz 7 页面尚未显示开放或截止时间。PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
+  "checkedAt": "2026-10-27T15:15:00+08:00",
+  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 22 项作业、测验或报名活动。新增 MSBS7102 Assignment 1，占总成绩 22%，活动页确认截止为 11 月 10 日 23:59。Quiz 5、Quiz 6 和 Quiz 7 尚未显示开放或截止时间。PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
   "tasks": [
     {
       "id": "msbs7101-section-1666655",
@@ -81,6 +81,17 @@
       "due": null,
       "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4325658",
       "note": "课程首页已新增 Quiz 7；活动页尚未显示开放或截止时间。进入测验需要课程提供的密码，按最高成绩评分。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "moodle-calendar-11496432",
+      "calendarUid": "11496432@moodle.hku.hk",
+      "courseCode": "MSBS7102",
+      "title": "Assignment 1",
+      "due": "2026-11-10T23:59:00+08:00",
+      "opens": "2026-10-23T23:59:00+08:00",
+      "url": "https://moodle.hku.hk/mod/assign/view.php?id=4333839",
+      "note": "占课程总成绩 22%。按活动页附件 Assignment 1 worksheet（Assignment_1-worksheet.qmd）的说明完成；活动页显示 10 月 23 日 23:59 开放、11 月 10 日 23:59 截止。附件请在 Moodle 作业页查看。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {
