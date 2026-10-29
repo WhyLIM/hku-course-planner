@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-27T15:15:00+08:00",
-  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 22 项作业、测验或报名活动。新增 MSBS7102 Assignment 1，占总成绩 22%，活动页确认截止为 11 月 10 日 23:59。Quiz 5、Quiz 6 和 Quiz 7 尚未显示开放或截止时间。PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
+  "checkedAt": "2026-10-29T18:35:00+08:00",
+  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 23 项作业、测验或报名活动。新增 MSBS7101 Assignment 2，占总成绩 20%，活动页确认截止为 11 月 13 日 23:59。MSBS7102 Assignment 1 截止为 11 月 10 日 23:59，占总成绩 22%。Quiz 5、Quiz 6 和 Quiz 7 尚未显示开放或截止时间。PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
   "tasks": [
     {
       "id": "msbs7101-section-1666655",
@@ -12,6 +12,17 @@
       "opens": "2026-09-15T20:30:00+08:00",
       "url": "https://moodle.hku.hk/mod/assign/view.php?id=4185334",
       "note": "提交入口已开放。须将全部答案与截图整理为一个 PDF 文件上传；未提前说明的迟交每天扣 5%，不足一天也按一天计算。课程章节标注此作业占比 20%。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "moodle-calendar-11538004",
+      "calendarUid": "11538004@moodle.hku.hk",
+      "courseCode": "MSBS7101",
+      "title": "Assignment 2 (20% of total course assessment)",
+      "due": "2026-11-13T23:59:00+08:00",
+      "opens": "2026-10-27T20:00:00+08:00",
+      "url": "https://moodle.hku.hk/mod/assign/view.php?id=4336277",
+      "note": "占课程总成绩 20%。请在 Moodle 作业页查看附件 PracticalBioinformatics_Assignment2.ipynb。活动页显示 10 月 27 日 20:00 开放、11 月 13 日 23:59 截止；未经事先批准的迟交每超过截止时间 24 小时扣 5%。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {
