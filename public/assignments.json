@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-30T18:24:00+08:00",
-  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 23 项作业、测验或报名活动。PAED7902 Assignment 1 的活动页截止时间已由 10 月 31 日 00:00 改为 10 月 31 日 23:59。MSBS7101 Assignment 2 截止为 11 月 13 日 23:59，占总成绩 20%；MSBS7102 Assignment 1 截止为 11 月 10 日 23:59，占总成绩 22%。Quiz 5、Quiz 6 和 Quiz 7 尚未显示开放或截止时间。PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
+  "checkedAt": "2026-11-02T13:17:00+08:00",
+  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 24 项作业、测验或报名活动。新增 MSBS7102 DNA Sequencing Technologies Quiz，10 月 30 日 18:30 为开放时间，尚未公布截止时间。MSPH7901 Assignment P2 的新公告写 11 月 7 日 23:59 截止，但活动页仍显示当日 15:31；当前保留较早的活动页时间，请向课程组确认。Quiz 5、Quiz 6 和 Quiz 7 尚未显示开放或截止时间。PATH7904 首页暂未显示作业；MSPH7901 按你提供的链接映射到 Moodle 的 CMED6100，课程代码不同，适用班级请核对。日期来自页面当前显示，午夜 00:00 指当天开始。",
   "tasks": [
     {
       "id": "msbs7101-section-1666655",
@@ -92,6 +92,17 @@
       "due": null,
       "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4325658",
       "note": "课程首页已新增 Quiz 7；活动页尚未显示开放或截止时间。进入测验需要课程提供的密码，按最高成绩评分。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "moodle-calendar-11565701",
+      "calendarUid": "11565701@moodle.hku.hk",
+      "courseCode": "MSBS7102",
+      "title": "DNA Sequencing Technologies Quiz",
+      "due": null,
+      "opens": "2026-10-30T18:30:00+08:00",
+      "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4339174",
+      "note": "活动页显示 10 月 30 日 18:30 开放，尚未显示截止时间。限时 15 分钟，按最高成绩评分。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {
@@ -230,7 +241,7 @@
       "due": "2026-11-07T15:31:00+08:00",
       "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4280915",
       "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
-      "note": "下载 Moodle 提供的 Pain.xls，在 R 中导入并分析一项模拟癌症疼痛随机对照试验数据；活动页显示 11 月 7 日 15:31 截止，按最高成绩评分。",
+      "note": "下载 Moodle 提供的 Pain.xls，在 R 中导入并分析一项模拟癌症疼痛随机对照试验数据，按最高成绩评分。11 月 2 日的课程公告写 11 月 7 日 23:59 截止，但同日核对活动页仍显示当日 15:31。两处时间不一致，当前保留较早的活动页时间，请向课程组确认。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {

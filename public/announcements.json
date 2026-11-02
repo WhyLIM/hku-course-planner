@@ -1,8 +1,24 @@
 {
   "version": 1,
-  "checkedAt": "2026-10-30T18:24:00+08:00",
-  "coverage": "已核对五门课的课程公告论坛。MSBS7101 当前公开 1 则，MSPH7901 当前公开 12 则课程相关公告；另有 1 则失物招领因不属于课程安排而未公开。MSBS7102、PAED7902 和 PATH7904 暂无公告。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
+  "checkedAt": "2026-11-02T13:17:00+08:00",
+  "coverage": "已核对五门课的课程公告论坛。MSBS7101 当前公开 1 则，MSPH7901 当前公开 13 则课程相关公告；另有 1 则失物招领因不属于课程安排而未公开。新增 Assignment P2 截止提醒；公告与活动页的具体时间不一致，已在摘要中注明。MSBS7102、PAED7902 和 PATH7904 暂无公告。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
   "items": [
+    {
+      "id": "moodle-discussion-1072143",
+      "courseCode": "MSPH7901",
+      "title": "Kind Reminder: Assignment P2 Deadline",
+      "publishedAt": "2026-11-02T12:41:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1072143",
+      "body": "公告提醒 Assignment P2 应在 2026 年 11 月 7 日星期六 23:59 前提交。但 11 月 2 日核对对应活动页时，页面仍显示当日 15:31 关闭。两处时间不一致，请向课程组确认，并按较早的活动页时间提前准备。",
+      "priority": "important",
+      "keyDates": [
+        {
+          "label": "公告所述 Assignment P2 截止（活动页仍为 15:31）",
+          "at": "2026-11-07T23:59:00+08:00",
+          "kind": "deadline"
+        }
+      ]
+    },
     {
       "id": "moodle-discussion-1066984",
       "courseCode": "MSPH7901",
