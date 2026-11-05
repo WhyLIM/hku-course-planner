@@ -1,8 +1,22 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-02T13:17:00+08:00",
-  "coverage": "已核对五门课的课程公告论坛。MSBS7101 当前公开 1 则，MSPH7901 当前公开 13 则课程相关公告；另有 1 则失物招领因不属于课程安排而未公开。新增 Assignment P2 截止提醒；公告与活动页的具体时间不一致，已在摘要中注明。MSBS7102、PAED7902 和 PATH7904 暂无公告。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
+  "checkedAt": "2026-11-05T18:07:00+08:00",
+  "coverage": "已增量核对五门课的公告入口及全部讨论列表。MSBS7101 当前公开 1 则，MSPH7901 当前公开 14 则课程相关公告；另有 1 则失物招领未公开。新增 Session 7 与 Practical 3 材料及报名通知；旧讨论列表时间未变，未重复读取正文。MSBS7102、PAED7902 和 PATH7904 Timetable 论坛暂无公告。Assignment P2 公告与活动页的截止时间仍不一致。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
   "items": [
+    {
+      "id": "moodle-discussion-1073322",
+      "courseCode": "MSPH7901",
+      "title": "Session 7 and Practical 3 Material Uploaded",
+      "publishedAt": "2026-11-04T20:46:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1073322",
+      "body": "Session 7（Designing Studies）的讲义与 Concept Note 已上传，建议课前阅读 Concept Note。Practical 3 的材料与报名也已开放，请选择一个场次并预先准备。报名页列出 11 月 9 日 16:30–18:30（3SR-LT1）、11 月 11 日 11:00–13:00（LT1）、11 月 12 日 18:30–20:30（QTLT）三个可选场次，未显示报名截止时间。以下日期为可选上课时间，不是三个必须参加的课次。",
+      "priority": "important",
+      "keyDates": [
+        {"label": "Practical 3 可选场次一（3SR-LT1）", "at": "2026-11-09T16:30:00+08:00", "kind": "event"},
+        {"label": "Practical 3 可选场次二（LT1）", "at": "2026-11-11T11:00:00+08:00", "kind": "event"},
+        {"label": "Practical 3 可选场次三（QTLT）", "at": "2026-11-12T18:30:00+08:00", "kind": "event"}
+      ]
+    },
     {
       "id": "moodle-discussion-1072143",
       "courseCode": "MSPH7901",
