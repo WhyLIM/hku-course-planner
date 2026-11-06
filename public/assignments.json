@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-05T18:07:00+08:00",
-  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 29 项作业、测验、报名或考核说明。新增 MSBS7102 Assignment 2、MSPH7901 Assignment S7、Assignment P3 与 Practical 3 报名，以及 PATH7904 考核说明文件入口。Assignment P3 的 11 月 14 日 21:23 是开放时间，未公布截止时间；Practical 3 报名页未显示截止时间。MSPH7901 Assignment P2 公告写 11 月 7 日 23:59 截止，但活动页本次仍显示当日 15:31；保留较早时间并提示向课程组确认。Quiz 5、Quiz 6、Quiz 7 与 DNA Sequencing Technologies Quiz 的首页时间未变化。MSPH7901 对应用户指定的 Moodle CMED6100，保留课程代码差异。日期为香港 UTC+8，午夜 00:00 指当天开始。",
+  "checkedAt": "2026-11-06T14:11:00+08:00",
+  "coverage": "已核对五门课的课程首页及 Moodle 日历；当前公开 29 项作业、测验、报名或考核说明，本次未发现可公开的新增作业或日期变化。Assignment P3 的 11 月 14 日 21:23 是开放时间，未公布截止时间；Practical 3 报名首页未显示截止时间。MSPH7901 Assignment P2 公告写 11 月 7 日 23:59 截止，但活动页本次仍显示当日 15:31；保留较早时间并提示向课程组确认。Quiz 5、Quiz 6、Quiz 7 与 DNA Sequencing Technologies Quiz 的首页时间未变化。PATH7904 考核说明保留文件入口，文件内要求与截止时间尚未核对。MSPH7901 对应用户指定的 Moodle CMED6100，保留课程代码差异。日期为香港 UTC+8，午夜 00:00 指当天开始。",
   "tasks": [
     {
       "id": "moodle-calendar-11652272",
