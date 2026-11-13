@@ -1,8 +1,48 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-10T18:39:00+08:00",
-  "coverage": "已增量核对五门课的公告入口及全部讨论列表。MSBS7101 当前公开 1 则，MSPH7901 当前公开 14 则课程相关公告；另有 1 则失物招领未公开。本次无新增讨论，列表时间未变，未重复读取正文，旧公告全部保留。MSBS7102、PAED7902 和 PATH7904 Timetable 论坛暂无公告。Assignment P2 公告与活动页的截止时间仍不一致。正文为面向全班的内容摘要，不包含发帖人姓名、联系方式或个人账户信息。",
+  "checkedAt": "2026-11-13T19:47:00+08:00",
+  "coverage": "已增量核对五门课的公告入口及全部讨论列表。本次新增三则课程公告，MSBS7101 现公开 2 则，MSPH7901 现公开 16 则。MSBS7102、PAED7902 和 PATH7904 Timetable 论坛暂无公告。MSPH7901 Assignment P3 的公告截止时间与活动关闭时间不同，已在对应公告注明。正文为面向全班的内容摘要。",
   "items": [
+    {
+      "id": "moodle-discussion-1076708",
+      "courseCode": "MSPH7901",
+      "title": "Practical 3, Assignment P3 and S8",
+      "publishedAt": "2026-11-13T10:59:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1076708",
+      "body": "公告称 Assignment P3 和 S8 均于 11 月 27 日 23:59 截止。S8 活动页显示相同时间，P3 活动页显示 11 月 26 日 23:59 关闭。请按较早时间安排 P3，并向课程组确认。Practical 3 的代码、录播和讲义已上传，公告同时提醒报名 Practical 4。",
+      "priority": "important",
+      "keyDates": [
+        {"label": "Assignment P3 活动页关闭时间", "at": "2026-11-26T23:59:00+08:00", "kind": "deadline"},
+        {"label": "公告所列 Assignment P3 截止时间", "at": "2026-11-27T23:59:00+08:00", "kind": "deadline"},
+        {"label": "Assignment S8 截止", "at": "2026-11-27T23:59:00+08:00", "kind": "deadline"}
+      ]
+    },
+    {
+      "id": "moodle-discussion-1076322",
+      "courseCode": "MSPH7901",
+      "title": "Session 8 Materials and Practical 4 Sign-up",
+      "publishedAt": "2026-11-12T11:47:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1076322",
+      "body": "Session 8（Applied Regression）的讲义与 Concept Note 已上传，建议课前阅读 Concept Note。Practical 4 的材料及报名已开放，请尽快选择一个场次。报名页列出 11 月 16 日 16:00–18:00（3SR-LT1）、11 月 16 日 18:30–20:30（QTLT）和 11 月 19 日 11:00–13:00（LT1）三个可选场次。",
+      "priority": "important",
+      "keyDates": [
+        {"label": "Practical 4 可选场次一（3SR-LT1）", "at": "2026-11-16T16:00:00+08:00", "kind": "event"},
+        {"label": "Practical 4 可选场次二（QTLT）", "at": "2026-11-16T18:30:00+08:00", "kind": "event"},
+        {"label": "Practical 4 可选场次三（LT1）", "at": "2026-11-19T11:00:00+08:00", "kind": "event"}
+      ]
+    },
+    {
+      "id": "moodle-discussion-1075654",
+      "courseCode": "MSBS7101",
+      "title": "Assignment 2",
+      "publishedAt": "2026-11-10T21:30:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1075654",
+      "body": "PracticalBioinformatics_Assignment2.ipynb 的 Q3 预填答案仅供格式参考，请填写代码实际得出的答案。作业于 11 月 13 日 23:59 截止。",
+      "priority": "important",
+      "keyDates": [
+        {"label": "MSBS7101 Assignment 2 截止", "at": "2026-11-13T23:59:00+08:00", "kind": "deadline"}
+      ]
+    },
     {
       "id": "moodle-discussion-1073322",
       "courseCode": "MSPH7901",

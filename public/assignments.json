@@ -1,17 +1,17 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-10T18:39:00+08:00",
-  "coverage": "已核对五门课的课程首页及 Moodle 日历。当前公开 29 项作业、测验、报名或考核说明。MSPH7901 Assignment P3 提前至 11 月 12 日 21:23 开放，截止时间待公布。MSBS7102 Assignment 1 的活动页显示 11 月 10 日 23:59 截止。MSPH7901 对应 Moodle 的 CMED6100。日期为香港 UTC+8，午夜 00:00 指当天开始。",
+  "checkedAt": "2026-11-13T19:47:00+08:00",
+  "coverage": "已核对五门课的课程首页、Moodle 日历及有变动的活动页。当前公开 33 项作业、测验、报名或考核说明。MSPH7901 Assignment P3 的活动关闭时间与公告相差一天，已标明两处时间并采用较早时间提醒。MSPH7901 对应 Moodle 的 CMED6100。日期为香港 UTC+8，午夜 00:00 指当天开始。",
   "tasks": [
     {
       "id": "moodle-calendar-11652272",
       "calendarUid": "11652272@moodle.hku.hk",
       "courseCode": "MSBS7102",
       "title": "Assignment 2 · GWAS study design and statistical power",
-      "due": "2026-11-20T00:00:00+08:00",
+      "due": "2026-11-26T00:00:00+08:00",
       "opens": "2026-11-06T00:00:00+08:00",
       "url": "https://moodle.hku.hk/mod/assign/view.php?id=4346962",
-      "note": "使用网页功效计算器，在给定样本量和研究设计参数下估算全基因组关联研究（GWAS）的统计功效，并比较各参数变化的影响。要求见 Moodle 附件 GWAS_SampleSize_Homework_Student.docx。活动页显示 11 月 6 日 00:00 开放、11 月 20 日 00:00 截止，意味着应在 11 月 19 日晚完成。",
+      "note": "使用网页功效计算器，在给定样本量和研究设计参数下估算全基因组关联研究（GWAS）的统计功效，并比较各参数变化的影响。要求见 Moodle 附件 GWAS_SampleSize_Homework_Student.docx。课程首页与活动页均显示 11 月 26 日 00:00 截止，请在 11 月 25 日晚完成。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {
@@ -30,11 +30,44 @@
       "calendarUid": "11655670@moodle.hku.hk",
       "courseCode": "MSPH7901",
       "title": "Assignment P3",
-      "due": null,
+      "due": "2026-11-26T23:59:00+08:00",
       "opens": "2026-11-12T21:23:00+08:00",
       "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4347315",
       "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
-      "note": "课程首页及活动页均显示 11 月 12 日 21:23 开放，截止时间待公布。题目背景为比较恶性低位胆管梗阻的外科胆道旁路手术与内镜支架治疗的随机对照试验，以术后 30 天死亡为二分类主要结局；显著性水平 5%、统计功效 95%，目标检出死亡率从 20% 变为 10%。具体问题在 Moodle 查看。",
+      "note": "课程首页与活动页均显示 11 月 26 日 23:59 关闭，11 月 13 日的全班公告写 11 月 27 日 23:59 截止。课表采用较早的活动关闭时间提醒，请以课程组确认的安排为准。题目背景为比较恶性低位胆管梗阻的外科胆道旁路手术与内镜支架治疗的随机对照试验，以术后 30 天死亡为二分类主要结局；显著性水平 5%、统计功效 95%，目标检出死亡率从 20% 变为 10%。具体问题在 Moodle 查看。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "moodle-calendar-11767315",
+      "calendarUid": "11767315@moodle.hku.hk",
+      "courseCode": "MSPH7901",
+      "title": "Assignment S8",
+      "due": "2026-11-27T23:59:00+08:00",
+      "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4355789",
+      "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
+      "note": "Session 8 Applied Regression 的作业。课程公告和活动页均显示 11 月 27 日 23:59 截止。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "moodle-calendar-11767313",
+      "calendarUid": "11767313@moodle.hku.hk",
+      "courseCode": "MSPH7901",
+      "title": "Assignment P4",
+      "due": null,
+      "opens": "2026-11-19T10:47:00+08:00",
+      "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4356943",
+      "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
+      "note": "课程首页与活动页均显示 11 月 19 日 10:47 开放，截止时间待公布。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "msph7901-choice-4355814",
+      "courseCode": "MSPH7901",
+      "title": "Practical 4 Sign-up",
+      "due": null,
+      "url": "https://moodle.hku.hk/course/view.php?id=145150",
+      "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
+      "note": "请在课程的 Practical 4 章节选择一个场次。可选 11 月 16 日 16:00–18:00（3SR-LT1）、11 月 16 日 18:30–20:30（QTLT）或 11 月 19 日 11:00–13:00（LT1）。活动页未列报名截止时间。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {
@@ -75,7 +108,18 @@
       "due": "2026-11-13T23:59:00+08:00",
       "opens": "2026-10-27T20:00:00+08:00",
       "url": "https://moodle.hku.hk/mod/assign/view.php?id=4336277",
-      "note": "占课程总成绩 20%。请在 Moodle 作业页查看附件 PracticalBioinformatics_Assignment2.ipynb。活动页显示 10 月 27 日 20:00 开放、11 月 13 日 23:59 截止；未经事先批准的迟交每超过截止时间 24 小时扣 5%。",
+      "note": "占课程总成绩 20%。请在 Moodle 作业页查看附件 PracticalBioinformatics_Assignment2.ipynb。11 月 10 日的课程公告提醒，Q3 中预填的答案仅供格式参考，请填写代码实际得出的答案。活动页显示 10 月 27 日 20:00 开放、11 月 13 日 23:59 截止。未经事先批准的迟交每超过截止时间 24 小时扣 5%。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "moodle-calendar-11742259",
+      "calendarUid": "11742259@moodle.hku.hk",
+      "courseCode": "MSBS7101",
+      "title": "Assignment · Case-based candidate gene prioritization and variant interpretation",
+      "due": "2026-11-25T00:00:00+08:00",
+      "opens": "2026-11-11T00:00:00+08:00",
+      "url": "https://moodle.hku.hk/mod/assign/view.php?id=4354283",
+      "note": "根据提供的变异注释、群体频率、功能预测、遗传模式和表型，说明筛选策略并排序候选基因及变异。建议结合适用的 ACMG/AMP 证据。通过 Moodle 提交 2–3 页 PDF，页数含表格和参考文献。作业总分 20。课程首页与活动页显示 11 月 25 日 00:00 截止，请在 11 月 24 日晚完成。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {
