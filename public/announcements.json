@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-13T19:47:00+08:00",
-  "coverage": "已增量核对五门课的公告入口及全部讨论列表。本次新增三则课程公告，MSBS7101 现公开 2 则，MSPH7901 现公开 16 则。MSBS7102、PAED7902 和 PATH7904 Timetable 论坛暂无公告。MSPH7901 Assignment P3 的公告截止时间与活动关闭时间不同，已在对应公告注明。正文为面向全班的内容摘要。",
+  "checkedAt": "2026-11-17T01:21:00+08:00",
+  "coverage": "已增量核对五门课的公告入口及全部讨论列表，本次无新增或修改。MSBS7101 现公开 2 则，MSPH7901 现公开 16 则。MSBS7102、PAED7902 和 PATH7904 Timetable 论坛暂无公告。MSPH7901 Assignment P3 的公告截止时间与活动关闭时间不同，已在对应公告注明。正文为面向全班的内容摘要。",
   "items": [
     {
       "id": "moodle-discussion-1076708",
