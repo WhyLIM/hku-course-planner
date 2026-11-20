@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-17T01:21:00+08:00",
-  "coverage": "已核对五门课的课程首页、Moodle 日历及有变动的活动页。当前公开 33 项作业、测验、报名或考核说明。MSPH7901 Assignment P3 的活动关闭时间与公告相差一天，已标明两处时间并采用较早时间提醒。MSPH7901 对应 Moodle 的 CMED6100。日期为香港 UTC+8，午夜 00:00 指当天开始。",
+  "checkedAt": "2026-11-20T17:46:00+08:00",
+  "coverage": "已核对五门课的课程首页、Moodle 日历及有变动的活动页。当前公开 34 项作业、测验、报名或考核说明。新增 MSPH7901 Assignment S9 的开放时间，并确认 P4 的关闭时间。MSPH7901 Assignment P3 的活动关闭时间与公告相差一天，已标明两处时间并采用较早时间提醒。MSPH7901 对应 Moodle 的 CMED6100。日期为香港 UTC+8，午夜 00:00 指当天开始。",
   "tasks": [
     {
       "id": "moodle-calendar-11652272",
@@ -50,14 +50,26 @@
     },
     {
       "id": "moodle-calendar-11767313",
-      "calendarUid": "11767313@moodle.hku.hk",
+      "calendarUid": "11846055@moodle.hku.hk",
       "courseCode": "MSPH7901",
       "title": "Assignment P4",
-      "due": null,
+      "due": "2026-12-03T11:37:00+08:00",
       "opens": "2026-11-19T10:47:00+08:00",
       "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4356943",
       "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
-      "note": "课程首页与活动页均显示 11 月 19 日 10:47 开放，截止时间待公布。",
+      "note": "下载 Moodle 中的 Lowbwt.rds 数据集，导入 RStudio 后按作业要求分析低出生体重相关风险因素。课程首页与活动页均显示 11 月 19 日 10:47 开放，12 月 3 日 11:37 关闭（香港时间）。Practical 4 录播和补充材料已上传。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
+    {
+      "id": "moodle-calendar-11846054",
+      "calendarUid": "11846054@moodle.hku.hk",
+      "courseCode": "MSPH7901",
+      "title": "Assignment S9",
+      "due": null,
+      "opens": "2026-11-22T23:59:00+08:00",
+      "url": "https://moodle.hku.hk/mod/quiz/view.php?id=4362673",
+      "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
+      "note": "课程首页与活动页均显示 11 月 22 日 23:59 开放，尚未列出截止时间；日历中的 opens 事件不是截止日期。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {

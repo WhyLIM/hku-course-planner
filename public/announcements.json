@@ -1,8 +1,30 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-17T01:21:00+08:00",
-  "coverage": "已增量核对五门课的公告入口及全部讨论列表，本次无新增或修改。MSBS7101 现公开 2 则，MSPH7901 现公开 16 则。MSBS7102、PAED7902 和 PATH7904 Timetable 论坛暂无公告。MSPH7901 Assignment P3 的公告截止时间与活动关闭时间不同，已在对应公告注明。正文为面向全班的内容摘要。",
+  "checkedAt": "2026-11-20T17:46:00+08:00",
+  "coverage": "已增量核对五门课的公告入口及全部讨论列表。本次新增两则 MSPH7901 公告，MSBS7101 现公开 2 则，MSPH7901 现公开 18 则。MSBS7102、PAED7902 和 PATH7904 Timetable 论坛暂无公告。MSPH7901 Assignment P3 的公告截止时间与活动关闭时间不同，已在对应公告注明。正文为面向全班的内容摘要，不包含个人成绩或提交信息。",
   "items": [
+    {
+      "id": "moodle-discussion-1078724",
+      "courseCode": "MSPH7901",
+      "title": "Session 9 Materials, Practical 4 Slides, and Assignment P4",
+      "publishedAt": "2026-11-19T11:32:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1078724",
+      "body": "Session 9（Analysis of Survival Data）的讲义和 Concept Note 已上传，建议课前阅读 Concept Note。Practical 4 的录播和后续补充材料已上传，Assignment P4 已开放。另经课程首页与 P4 活动页核对，P4 于 12 月 3 日 11:37 关闭（香港时间）。",
+      "priority": "important",
+      "keyDates": [
+        {"label": "Assignment P4 活动页关闭时间", "at": "2026-12-03T11:37:00+08:00", "kind": "deadline"}
+      ]
+    },
+    {
+      "id": "moodle-discussion-1077940",
+      "courseCode": "MSPH7901",
+      "title": "Mid-term Exam Results",
+      "publishedAt": "2026-11-17T13:02:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1077940",
+      "body": "课程组通知期中考试结果已在 Moodle 发布，请自行前往课程的 Grades 栏目查看。",
+      "priority": "normal",
+      "keyDates": []
+    },
     {
       "id": "moodle-discussion-1076708",
       "courseCode": "MSPH7901",
