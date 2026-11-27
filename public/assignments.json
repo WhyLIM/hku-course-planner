@@ -1,17 +1,27 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-20T17:46:00+08:00",
-  "coverage": "已核对五门课的课程首页、Moodle 日历及有变动的活动页。当前公开 34 项作业、测验、报名或考核说明。新增 MSPH7901 Assignment S9 的开放时间，并确认 P4 的关闭时间。MSPH7901 Assignment P3 的活动关闭时间与公告相差一天，已标明两处时间并采用较早时间提醒。MSPH7901 对应 Moodle 的 CMED6100。日期为香港 UTC+8，午夜 00:00 指当天开始。",
+  "checkedAt": "2026-11-27T14:28:00+08:00",
+  "coverage": "已核对五门课的课程首页、Moodle 日历及有变动的活动页。当前公开 35 项作业、测验、报名或考核说明。本次更新 MSBS7102 Assignment 2 的截止时间并加入 MSPH7901 辅导报名；S9 仍未列出截止时间。S7 的已过期关闭时间变化尚未确认适用于全班，保留原快照。MSPH7901 Assignment P3 的活动关闭时间与公告相差一天，已标明两处时间并采用较早时间提醒。MSPH7901 对应 Moodle 的 CMED6100。日期为香港 UTC+8，午夜 00:00 指当天开始。",
   "tasks": [
+    {
+      "id": "msph7901-choice-4371142",
+      "courseCode": "MSPH7901",
+      "title": "Tutorial Session Sign-up",
+      "due": null,
+      "url": "https://moodle.hku.hk/course/view.php?id=145150",
+      "sourceName": "CMED6100 Introduction to Biostatistics [2026]（用户指定对应 MSPH7901）",
+      "note": "辅导材料及报名入口已开放，请在 Tutorial Session 章节只选择一场：12 月 7 日 16:30–18:30（3SR-LT1），或 12 月 9 日 18:30–20:30（LT1）。每场前半部分讨论课程内容，后半部分讲解模拟测验答案；请先自行完成模拟测验。报名页未列截止时间。",
+      "status": "个人提交状态请在 Moodle 查看"
+    },
     {
       "id": "moodle-calendar-11652272",
       "calendarUid": "11652272@moodle.hku.hk",
       "courseCode": "MSBS7102",
       "title": "Assignment 2 · GWAS study design and statistical power",
-      "due": "2026-11-26T00:00:00+08:00",
+      "due": "2026-11-30T00:00:00+08:00",
       "opens": "2026-11-06T00:00:00+08:00",
       "url": "https://moodle.hku.hk/mod/assign/view.php?id=4346962",
-      "note": "使用网页功效计算器，在给定样本量和研究设计参数下估算全基因组关联研究（GWAS）的统计功效，并比较各参数变化的影响。要求见 Moodle 附件 GWAS_SampleSize_Homework_Student.docx。课程首页与活动页均显示 11 月 26 日 00:00 截止，请在 11 月 25 日晚完成。",
+      "note": "使用网页功效计算器，在给定样本量和研究设计参数下估算全基因组关联研究（GWAS）的统计功效，并比较各参数变化的影响。要求见 Moodle 附件 GWAS_SampleSize_Homework_Student.docx。课程首页与活动页的 Due 字段现均显示 11 月 30 日 00:00 截止（当天开始），请在 11 月 29 日晚完成。",
       "status": "个人提交状态请在 Moodle 查看"
     },
     {

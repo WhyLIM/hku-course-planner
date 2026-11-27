@@ -1,8 +1,57 @@
 {
   "version": 1,
-  "checkedAt": "2026-11-20T17:46:00+08:00",
-  "coverage": "已增量核对五门课的公告入口及全部讨论列表。本次新增两则 MSPH7901 公告，MSBS7101 现公开 2 则，MSPH7901 现公开 18 则。MSBS7102、PAED7902 和 PATH7904 Timetable 论坛暂无公告。MSPH7901 Assignment P3 的公告截止时间与活动关闭时间不同，已在对应公告注明。正文为面向全班的内容摘要，不包含个人成绩或提交信息。",
+  "checkedAt": "2026-11-27T14:28:00+08:00",
+  "coverage": "已增量核对五门课的公告入口及全部讨论列表。本次新增四则公告，MSBS7101 现公开 4 则，MSBS7102 现公开 1 则，MSPH7901 现公开 19 则。PAED7902 和 PATH7904 Timetable 论坛暂无公告。MSPH7901 Assignment P3 的公告截止时间与活动关闭时间不同，已在对应公告注明。正文为面向全班的内容摘要，不包含个人成绩、提交信息或会议密码。",
   "items": [
+    {
+      "id": "moodle-discussion-1081374",
+      "courseCode": "MSPH7901",
+      "title": "Tutorial Session Sign-up",
+      "publishedAt": "2026-11-27T10:45:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1081374",
+      "body": "辅导材料已上传，报名入口已开放，请只选择两场中的一场。辅导前半部分讨论课程内容，后半部分讲解模拟测验答案，请先自行完成模拟测验。报名页列出的场次为 12 月 7 日 16:30–18:30（3SR-LT1），或 12 月 9 日 18:30–20:30（LT1），未列报名截止时间。",
+      "priority": "important",
+      "keyDates": [
+        {"label": "辅导可选场次一（3SR-LT1）", "at": "2026-12-07T16:30:00+08:00", "kind": "event"},
+        {"label": "辅导可选场次二（LT1）", "at": "2026-12-09T18:30:00+08:00", "kind": "event"}
+      ]
+    },
+    {
+      "id": "moodle-discussion-1081327",
+      "courseCode": "MSBS7101",
+      "title": "Consulation session",
+      "publishedAt": "2026-11-27T00:14:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1081327",
+      "body": "12 月 1 日 18:30 将按平常上课时间举行线上答疑，课程教师将回答课程内容相关问题。如需另约答疑时间，可通过课程原有渠道联系。Zoom 入口请在 Moodle 原公告查看。",
+      "priority": "important",
+      "keyDates": [
+        {"label": "线上答疑开始", "at": "2026-12-01T18:30:00+08:00", "kind": "event"}
+      ]
+    },
+    {
+      "id": "moodle-discussion-1079767",
+      "courseCode": "MSBS7102",
+      "title": "Revision session on Nov 27th",
+      "publishedAt": "2026-11-23T09:50:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1079767",
+      "body": "11 月 27 日课程将先简要回顾课程并介绍期末考试复习建议，再进行原定的单细胞、空间及多组学主题。公告明确本周地点为 3SR-SR2（No. 3 Sassoon Road，4 楼）。开始时间沿用现有课表的 18:30；公告未另列时间。",
+      "priority": "important",
+      "keyDates": [
+        {"label": "复习课程（18:30 沿用课表，3SR-SR2）", "at": "2026-11-27T18:30:00+08:00", "kind": "event"}
+      ]
+    },
+    {
+      "id": "moodle-discussion-1079525",
+      "courseCode": "MSBS7101",
+      "title": "Information about final exam",
+      "publishedAt": "2026-11-21T23:48:00+08:00",
+      "url": "https://moodle.hku.hk/mod/forum/discuss.php?d=1079525",
+      "body": "期末考试为 12 月 8 日 18:30–20:30，10 道简答题、总分 90 分，占课程总评 30%，允许使用计算器。重点考查分析流程、理论概念及结果解释，需要了解课程工具的用途和功能，不要求编写代码。没有历年试卷；原公告提供了 RNA-seq 分析及 PCA 相关示例题供了解题型。",
+      "priority": "important",
+      "keyDates": [
+        {"label": "期末考试开始（18:30–20:30）", "at": "2026-12-08T18:30:00+08:00", "kind": "event"}
+      ]
+    },
     {
       "id": "moodle-discussion-1078724",
       "courseCode": "MSPH7901",
